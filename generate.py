@@ -101,6 +101,7 @@ def plan_day(day, input_json):
     day_definition += "\t\t\t]\n\t\t}"
     return day_definition
 
+# Cargo Cult fun with the function below (from http://eli.thegreenplace.net/2010/01/22/weighted-random-generation-in-python/)
 def weighted_choice(weights):
     totals = []
     running_total = 0
