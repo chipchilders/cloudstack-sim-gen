@@ -40,7 +40,7 @@ def create_scenario(inputfilename, outputfilename):
     input_json = json.loads(input_json_file.read())
     input_json_file.close()
 
-    output_json = ""
+    output = {}
 
     try:
         check_required_data(input_json)
@@ -53,34 +53,31 @@ def create_scenario(inputfilename, outputfilename):
 #        len(input_json["accounts"]), 
 #        input_json["account_dispersion"], 
 #        len(input_json["service_offerings"]), 
-#        input_json["vm_dispersion"], 
+#        input_json["offering_dispersion"], 
 #        input_json["vm_growth"])
 
     day = 1
-    output_json += "{\n\t\"days\": [\n"
-    while day < input_json["number_of_days"]+1:
-        output_json += plan_day(day, input_json)
-        day+=1
-        if day == input_json["number_of_days"]+1:
-            output_json += "\n"
-        else:
-            output_json += ",\n"
+    output["accounts"] = input_json["accounts"]
+    output["service_offerings"] = input_json["service_offerings"]
+    output["days"] = []
 
-    output_json += "\t]\n}\n"
+    while day < input_json["number_of_days"]+1:
+        output["days"].append(plan_day(day, input_json))
+        day+=1
 
     if outputfilename == "stdout":
-        print output_json
+        print json.dumps(output, sort_keys=True, indent=4, separators=(',', ': '))
     else:
         file_to_write = open(outputfilename, 'w')
         file_to_write.truncate()
-        file_to_write.write(output_json)
+        file_to_write.write(json.dumps(output, sort_keys=True, indent=4, separators=(',', ': ')))
         file_to_write.close()
 
     return 0
 
 def plan_day(day, input_json):
-    day_definition = "\t\t{\n"
-    day_definition += "\t\t\"day\": %s, \n\t\t\"newvms\": [\n" % day
+    day_definition = { "day": day }
+    day_definition["newvms"] = []
 
     x = day
     num_vms_for_day = int(round(eval(input_json["vm_growth"]), 0))
@@ -88,17 +85,10 @@ def plan_day(day, input_json):
     i = 1
     while i <= num_vms_for_day:
         account_for_vm = weighted_choice(input_json["account_dispersion"])
-        #print "Account selected: %s" % input_json["accounts"][account_for_vm]["username"]
-        service_offering_for_vm = weighted_choice(input_json["vm_dispersion"])
-        #print "Service offering selected: %s" % input_json["service_offerings"][service_offering_for_vm]["name"]
-        day_definition += "\t\t\t{\"account\": \"%s\", \"service_offering\": \"%s\"}" % (input_json["accounts"][account_for_vm]["username"], input_json["service_offerings"][service_offering_for_vm]["name"])
+        service_offering_for_vm = weighted_choice(input_json["offering_dispersion"])
+        day_definition["newvms"].append({ "account": input_json["accounts"][account_for_vm]["username"], "service_offering": input_json["service_offerings"][service_offering_for_vm]["name"] })
         i+=1
-        if i > num_vms_for_day:
-            day_definition += "\n"
-        else:
-            day_definition += ",\n"
 
-    day_definition += "\t\t\t]\n\t\t}"
     return day_definition
 
 # Cargo Cult fun with the function below (from http://eli.thegreenplace.net/2010/01/22/weighted-random-generation-in-python/)
@@ -118,7 +108,7 @@ def weighted_choice(weights):
 def check_required_data(inputobj):
     check_specific_param(inputobj, 'number_of_days')
     check_specific_param(inputobj, 'vm_growth')
-    check_specific_param(inputobj, 'vm_dispersion')
+    check_specific_param(inputobj, 'offering_dispersion')
     check_specific_param(inputobj, 'account_dispersion')
     check_specific_param(inputobj, 'accounts')
     check_specific_param(inputobj, 'service_offerings')

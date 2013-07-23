@@ -1,7 +1,7 @@
 {
     "number_of_days": 30,
     "vm_growth": "10+(x*0.2)+pow(x*0.2,0.5)",
-    "vm_dispersion": [7,3],
+    "offering_dispersion": [7,3],
     "account_dispersion": [5,5],
 	"accounts": [
 		{
