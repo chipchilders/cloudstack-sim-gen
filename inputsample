@@ -1,0 +1,40 @@
+{
+    "number_of_days": 30,
+    "vm_growth": "10+(x*0.2)+pow(x*0.2,0.5)",
+    "vm_dispersion": [7,3],
+    "account_dispersion": [5,5],
+	"accounts": [
+		{
+            "email": "test@test.com",
+            "firstname": "Test",
+            "lastname": "User",
+            "username": "1",
+            "password": "password"
+        },
+		{
+            "email": "test@test.com",
+            "firstname": "Test",
+            "lastname": "User",
+            "username": "2",
+            "password": "password"
+        }
+    ],
+    "service_offerings": [
+        {
+            "name": "1",
+            "displaytext": "FirstFitPlanner Small",
+            "cpunumber": 1,
+            "cpuspeed": 100,
+            "memory": 1024,
+            "deploymentplanner": "FirstFitPlanner"
+        },
+        {
+            "name": "2",
+            "displaytext": "FirstFitPlanner Large",
+            "cpunumber": 1,
+            "cpuspeed": 100,
+            "memory": 2048,
+            "deploymentplanner": "FirstFitPlanner"
+        }
+    ]
+}
