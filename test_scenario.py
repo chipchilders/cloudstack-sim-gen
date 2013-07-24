@@ -16,7 +16,7 @@
 # under the License.
 
 from marvin.cloudstackTestCase import cloudstackTestCase
-from marvin.integration.lib.base import Account, VirtualMachine, ServiceOffering, Host, Cluster
+from marvin.integration.lib.base import Account, VirtualMachine, ServiceOffering, Host, Cluster, Zone
 from marvin.integration.lib.common import get_zone, get_domain, get_template, cleanup_resources
 import json
 import os
@@ -101,7 +101,11 @@ class TestScenario(cloudstackTestCase):
             service_offering
         )
 
-    def GetStats(self):
+    def GetZoneStats(self):
+        zone_list = Zone.list(self.apiclient, id=self.zone.id)
+        self.file_to_write.write(json.dumps(zone_list[0].__dict__["capacity"], sort_keys=True, indent=4, separators=(',', ': ')))
+
+    def GetHostStats(self):
         hosts_list = Host.list(self.apiclient)
         stats = {}
         statarr = []
@@ -131,7 +135,8 @@ class TestScenario(cloudstackTestCase):
         for day in self.services["scenario"]["days"]:
             for newvm in day["newvms"]:
                 self.CreateVM(newvm)
-                self.GetStats()
+                self.GetZoneStats()
+                self.GetHostStats()
 
     def CreateVM(self, newvm):
 
