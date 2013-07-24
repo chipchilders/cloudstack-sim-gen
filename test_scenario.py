@@ -106,17 +106,17 @@ class TestScenario(cloudstackTestCase):
         stats = {}
         statarr = []
         for host in hosts_list:
-            if "cpuallocated" in host:
+            if "cpuallocated" in host.__dict__:
                 statarr.append({
-                    "name": host["name"],
-                    "cpuwithoverprovisioning": host["cpuwithoverprovisioning"],
-                    "cpunumber": host["cpunumber"],
-                    "cpuallocated": host["cpuallocated"],
-                    "cpuused": host["cpuused"],
-                    "cpuspeed": host["cpuspeed"],
-                    "memorytotal": host["memorytotal"],
-                    "memoryused": host["memoryused"],
-                    "memoryallocated": host["memoryallocated"]
+                    "name": host.__dict__["name"],
+                    "cpuwithoverprovisioning": host.__dict__["cpuwithoverprovisioning"],
+                    "cpunumber": host.__dict__["cpunumber"],
+                    "cpuallocated": host.__dict__["cpuallocated"],
+                    "cpuused": host.__dict__["cpuused"],
+                    "cpuspeed": host.__dict__["cpuspeed"],
+                    "memorytotal": host.__dict__["memorytotal"],
+                    "memoryused": host.__dict__["memoryused"],
+                    "memoryallocated": host.__dict__["memoryallocated"]
                     })
 
         stats["statpoint"] = statarr
