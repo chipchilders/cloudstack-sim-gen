@@ -210,6 +210,7 @@ class TestScenario(cloudstackTestCase):
 
             i = 1
             while i < cluster_size:
+                i+=1
                 host_services = self.services["hosts"][hypervisor_type]
                 host_services["url"] = "http://sim/" + str(uuid.uuid1()) + "/"
                 host = Host.create(
