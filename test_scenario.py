@@ -87,6 +87,8 @@ class TestScenario(cloudstackTestCase):
         self.file_to_write = open('/home/sg-user/cloudstack-sim-gen/test_scenario.out', 'w')
         self.file_to_write.truncate()
 
+        self.datapoints = []
+
 
     def CreateAccount(self, account):
         return Account.create(
@@ -101,13 +103,21 @@ class TestScenario(cloudstackTestCase):
             service_offering
         )
 
+    def GetStats(self, day, vm):
+        datapoint = {
+            "day": day,
+            "vm": vm
+        }
+        datapoint["zone"] = self.GetZoneStats()
+        datapoint["hosts"] = self.GetHostStats()
+        self.datapoints.append(datapoint)
+
     def GetZoneStats(self):
-        zone_list = Zone.list(self.apiclient, id=self.zone.id)
-        self.file_to_write.write(json.dumps(zone_list[0].__dict__["capacity"], sort_keys=True, indent=4, separators=(',', ': ')))
+        zone_list = Zone.list(self.apiclient, id=self.zone.id, showcapacities=True)
+        return zone_list[0].__dict__["capacity"]
 
     def GetHostStats(self):
         hosts_list = Host.list(self.apiclient)
-        stats = {}
         statarr = []
         for host in hosts_list:
             if "cpuallocated" in host.__dict__:
@@ -123,20 +133,21 @@ class TestScenario(cloudstackTestCase):
                     "memoryallocated": host.__dict__["memoryallocated"]
                     })
 
-        stats["statpoint"] = statarr
-
-        self.file_to_write.write(json.dumps(stats, sort_keys=True, indent=4, separators=(',', ': ')))
+        return statarr
 
     @attr(tags=["simulator", "advanced", "basic", "sg"])
     def test_runscenario(self):
         """Test to deploy vms using the defined scenario
         """
 
+        vm = 0
+        day = 0
         for day in self.services["scenario"]["days"]:
+            day+=1
             for newvm in day["newvms"]:
+                vm+=1
                 self.CreateVM(newvm)
-                self.GetZoneStats()
-                self.GetHostStats()
+                self.GetStats(day, vm)
 
     def CreateVM(self, newvm):
 
@@ -174,6 +185,8 @@ class TestScenario(cloudstackTestCase):
         )
 
     def tearDown(self):
+        stats = { "datapoints": self.datapoints }
+        self.file_to_write.write(json.dumps(stats, sort_keys=True, indent=4, separators=(',', ': ')))
         self.file_to_write.close()
         try:
             cleanup_resources(self.apiclient, self.cleanup)
