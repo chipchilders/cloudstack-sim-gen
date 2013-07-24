@@ -17,7 +17,7 @@
 
 from marvin.cloudstackTestCase import cloudstackTestCase
 from marvin.integration.lib.base import Account, VirtualMachine, ServiceOffering, Host, Cluster, Zone, StoragePool, Pod
-from marvin.integration.lib.common import get_zone, get_domain, get_template, cleanup_resources
+from marvin.integration.lib.common import get_zone, get_domain, get_template, cleanup_resources, get_pod
 import json
 import os
 import sys
@@ -39,15 +39,15 @@ class Services:
                     "clustername": "Xen Cluster",
                     "clustertype": "CloudManaged",
                     # CloudManaged or ExternalManaged"
-                    "hypervisor": "XenServer",
+                    "hypervisor": "Simulator",
                     # Hypervisor type
                 }
             },
            "hosts": {
-                 "xenserver": {
+                 "simulator": {
                 # Must be name of corresponding Hypervisor type
                 # in cluster in small letters
-                          "hypervisor": 'XenServer',
+                          "hypervisor": 'Simulator',
                           # Hypervisor type
                           "clustertype": 'CloudManaged',
                           # CloudManaged or ExternalManaged"
@@ -134,7 +134,7 @@ class TestScenario(cloudstackTestCase):
         datapoint["zone"] = self.GetZoneStats()
         datapoint["hosts"] = self.GetHostStats()
         self.datapoints.append(datapoint)
-        return FindZoneMemory(datapoint["zone"]["capacity"])
+        return self.FindZoneMemory(datapoint["zone"]["capacity"])
 
     def FindZoneMemory(self, zone_capacity):
         for cap in zone_capacity:
