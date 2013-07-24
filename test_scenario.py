@@ -108,7 +108,7 @@ class TestScenario(cloudstackTestCase):
             "day": day,
             "vm": vm
         }
-        datapoint["zone"] = self.GetZoneStats()
+        #datapoint["zone"] = self.GetZoneStats()
         datapoint["hosts"] = self.GetHostStats()
         self.datapoints.append(datapoint)
 
