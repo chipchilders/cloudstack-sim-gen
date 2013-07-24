@@ -16,12 +16,13 @@
 # under the License.
 
 from marvin.cloudstackTestCase import cloudstackTestCase
-from marvin.integration.lib.base import Account, VirtualMachine, ServiceOffering, Host, Cluster, Zone
+from marvin.integration.lib.base import Account, VirtualMachine, ServiceOffering, Host, Cluster, Zone, StoragePool, Pod
 from marvin.integration.lib.common import get_zone, get_domain, get_template, cleanup_resources
 import json
 import os
 import sys
 import pprint
+import uuid
 
 from nose.plugins.attrib import attr
 
@@ -32,6 +33,27 @@ class Services:
             "ostype": 'CentOS 5.3 (64-bit)',
             "virtual_machine": {
                 "hypervisor": "XenServer",
+                },
+           "clusters": {
+               0: {
+                    "clustername": "Xen Cluster",
+                    "clustertype": "CloudManaged",
+                    # CloudManaged or ExternalManaged"
+                    "hypervisor": "XenServer",
+                    # Hypervisor type
+                }
+            },
+           "hosts": {
+                 "xenserver": {
+                # Must be name of corresponding Hypervisor type
+                # in cluster in small letters
+                          "hypervisor": 'XenServer',
+                          # Hypervisor type
+                          "clustertype": 'CloudManaged',
+                          # CloudManaged or ExternalManaged"
+                          "username": "root",
+                          "password": "password",
+                          }
             }
         }
 
@@ -66,6 +88,7 @@ class TestScenario(cloudstackTestCase):
         # Get Zone, Domain and templates
         self.domain = get_domain(self.apiclient, self.services)
         self.zone = get_zone(self.apiclient, self.services)
+        self.pod = get_pod(self.apiclient, self.zone.id)
         self.template = get_template(
             self.apiclient,
             self.zone.id,
@@ -108,13 +131,24 @@ class TestScenario(cloudstackTestCase):
             "day": day,
             "vm": vm
         }
-        #datapoint["zone"] = self.GetZoneStats()
+        datapoint["zone"] = self.GetZoneStats()
         datapoint["hosts"] = self.GetHostStats()
         self.datapoints.append(datapoint)
+        return FindZoneMemory(datapoint["zone"]["capacity"])
+
+    def FindZoneMemory(self, zone_capacity):
+        for cap in zone_capacity:
+            if cap["type"] == 0:
+                return cap["percentused"]
+        raise Exception("Couldn't find the zone's memoryused.")
+
 
     def GetZoneStats(self):
         zone_list = Zone.list(self.apiclient, id=self.zone.id, showcapacities=True)
-        return zone_list[0].__dict__["capacity"]
+        cap = { "capacity": [] }
+        for capacity in zone_list[0].__dict__["capacity"]:
+            cap["capacity"].append(capacity.__dict__)
+        return cap
 
     def GetHostStats(self):
         hosts_list = Host.list(self.apiclient)
@@ -146,8 +180,58 @@ class TestScenario(cloudstackTestCase):
             day+=1
             for newvm in daydef["newvms"]:
                 vm+=1
-                self.CreateVM(newvm)
-                self.GetStats(day, vm)
+                #self.CreateVM(newvm)
+                current_zone_mem = self.GetStats(day, vm)
+                if current_zone_mem >= self.services["scenario"]["capacity_increase_rules"]["threashold"]:
+                    self.AddCluster(self.services["scenario"]["capacity_increase_rules"]["cluster_size"])
+
+    def AddCluster(self, cluster_size):
+        #Create clusters with Hypervisor type XEN/KVM/VWare
+        for k, v in self.services["clusters"].items():
+            cluster = Cluster.create(
+                                     self.apiclient,
+                                     v,
+                                     zoneid=self.zone.id,
+                                     podid=self.pod.id
+                                     )
+            self.debug(
+                "Created Cluster for hypervisor type %s & ID: %s" %(
+                                                                    v["hypervisor"],
+                                                                    cluster.id     
+                                                                    ))
+            self.assertEqual(
+                    cluster.allocationstate,
+                    'Enabled',
+                    "Check whether allocation state of cluster is enabled"
+                    )
+
+            hypervisor_type = str(cluster.hypervisortype.lower())
+
+            i = 1
+            while i < cluster_size:
+                host = Host.create(
+                               self.apiclient,
+                               cluster,
+                               self.services["hosts"][hypervisor_type],
+                               zoneid=self.zone.id,
+                               podid=self.pod.id,
+                               url="http://sim/" + str(uuid.uuid1()) + "/"
+                               )
+                self.debug(
+                    "Created host (ID: %s) in cluster ID %s" %(
+                                                                host.id,
+                                                                cluster.id
+                                                                ))
+
+            storage = StoragePool.create(self.apiclient,
+                                         url="nfs://nfsstor:/export/home/sandbox/" + str(uuid.uuid1()) + "/",
+                                         name=str(uuid.uuid1()),
+                                         clusterid=cluster.id,
+                                         zoneid=self.zone.id,
+                                         podid=self.pod.id
+                                         )
+
+        return
 
     def CreateVM(self, newvm):
 

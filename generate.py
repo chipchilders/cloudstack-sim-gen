@@ -59,6 +59,7 @@ def create_scenario(inputfilename, outputfilename):
     day = 1
     output["accounts"] = input_json["accounts"]
     output["service_offerings"] = input_json["service_offerings"]
+    output["capacity_increase_rules"] = input_json["capacity_increase_rules"]
     output["days"] = []
 
     while day < input_json["number_of_days"]+1:

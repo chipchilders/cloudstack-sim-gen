@@ -15,6 +15,11 @@
             "username": "2"
         }
     ],
+    "capacity_increase_rules": {
+        "target_resource": "memory",
+        "threashold": 85,
+        "cluster_size": 8
+    },
     "days": [
         {
             "day": 1,
