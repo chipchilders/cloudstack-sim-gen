@@ -209,13 +209,14 @@ class TestScenario(cloudstackTestCase):
 
             i = 1
             while i < cluster_size:
+                host_services = self.services["hosts"][hypervisor_type]
+                host_services["url"] = "http://sim/" + str(uuid.uuid1()) + "/"
                 host = Host.create(
                                self.apiclient,
                                cluster,
-                               self.services["hosts"][hypervisor_type],
+                               host_services,
                                zoneid=self.zone.id,
-                               podid=self.pod.id,
-                               url="http://sim/" + str(uuid.uuid1()) + "/"
+                               podid=self.pod.id
                                )
                 self.debug(
                     "Created host (ID: %s) in cluster ID %s" %(
@@ -223,9 +224,12 @@ class TestScenario(cloudstackTestCase):
                                                                 cluster.id
                                                                 ))
 
+            storage_services = { 
+                "url": "nfs://nfsstor:/export/home/sandbox/" + str(uuid.uuid1()) + "/",
+                "name": str(uuid.uuid1())
+                }
             storage = StoragePool.create(self.apiclient,
-                                         url="nfs://nfsstor:/export/home/sandbox/" + str(uuid.uuid1()) + "/",
-                                         name=str(uuid.uuid1()),
+                                         storage_services,
                                          clusterid=cluster.id,
                                          zoneid=self.zone.id,
                                          podid=self.pod.id
