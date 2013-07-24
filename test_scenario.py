@@ -84,6 +84,10 @@ class TestScenario(cloudstackTestCase):
         #    self.account
         ]
 
+        self.file_to_write = open('/home/sg-user/cloudstack-sim-gen/test_scenario.out', 'w')
+        self.file_to_write.truncate()
+
+
     def CreateAccount(self, account):
         return Account.create(
             self.apiclient,
@@ -97,6 +101,9 @@ class TestScenario(cloudstackTestCase):
             service_offering
         )
 
+    def GetStats(self):
+        hosts_list = Host.list(self.apiclient)
+        self.file_to_write.write(hosts_list)
 
     @attr(tags=["simulator", "advanced", "basic", "sg"])
     def test_runscenario(self):
@@ -106,6 +113,7 @@ class TestScenario(cloudstackTestCase):
         for day in self.services["scenario"]["days"]:
             for newvm in day["newvms"]:
                 self.CreateVM(newvm)
+                self.GetStats()
 
     def CreateVM(self, newvm):
 
@@ -143,6 +151,7 @@ class TestScenario(cloudstackTestCase):
         )
 
     def tearDown(self):
+        self.file_to_write.close()
         try:
             cleanup_resources(self.apiclient, self.cleanup)
         except Exception as e:
