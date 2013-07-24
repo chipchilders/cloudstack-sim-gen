@@ -182,12 +182,13 @@ class TestScenario(cloudstackTestCase):
                 vm+=1
                 #self.CreateVM(newvm)
                 current_zone_mem = self.GetStats(day, vm)
-                if current_zone_mem >= self.services["scenario"]["capacity_increase_rules"]["threashold"]:
-                    self.AddCluster(self.services["scenario"]["capacity_increase_rules"]["cluster_size"])
+                if float(current_zone_mem) >= float(self.services["scenario"]["capacity_increase_rules"]["threashold"]):
+                    self.AddCluster(int(self.services["scenario"]["capacity_increase_rules"]["cluster_size"]))
 
     def AddCluster(self, cluster_size):
         #Create clusters with Hypervisor type XEN/KVM/VWare
         for k, v in self.services["clusters"].items():
+            v["clustername"] = str(uuid.uuid1())
             cluster = Cluster.create(
                                      self.apiclient,
                                      v,
