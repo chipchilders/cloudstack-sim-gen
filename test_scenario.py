@@ -103,7 +103,25 @@ class TestScenario(cloudstackTestCase):
 
     def GetStats(self):
         hosts_list = Host.list(self.apiclient)
-        self.file_to_write.write(hosts_list)
+        stats = {}
+        statarr = []
+        for host in hosts_list:
+            if "cpuallocated" in host:
+                statarr.append({
+                    "name": host["name"],
+                    "cpuwithoverprovisioning": host["cpuwithoverprovisioning"],
+                    "cpunumber": host["cpunumber"],
+                    "cpuallocated": host["cpuallocated"],
+                    "cpuused": host["cpuused"],
+                    "cpuspeed": host["cpuspeed"],
+                    "memorytotal": host["memorytotal"],
+                    "memoryused": host["memoryused"],
+                    "memoryallocated": host["memoryallocated"]
+                    })
+
+        stats["statpoint"] = statarr
+
+        self.file_to_write.write(json.dumps(stats, sort_keys=True, indent=4, separators=(',', ': ')))
 
     @attr(tags=["simulator", "advanced", "basic", "sg"])
     def test_runscenario(self):
