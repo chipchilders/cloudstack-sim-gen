@@ -180,7 +180,7 @@ class TestScenario(cloudstackTestCase):
             day+=1
             for newvm in daydef["newvms"]:
                 vm+=1
-                #self.CreateVM(newvm)
+                self.CreateVM(newvm)
                 current_zone_mem = self.GetStats(day, vm)
                 if float(current_zone_mem) >= float(self.services["scenario"]["capacity_increase_rules"]["threashold"]):
                     self.AddCluster(int(self.services["scenario"]["capacity_increase_rules"]["cluster_size"]))
