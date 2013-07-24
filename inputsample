@@ -24,7 +24,7 @@
             "name": "1",
             "displaytext": "FirstFitPlanner Small",
             "cpunumber": 1,
-            "cpuspeed": 100,
+            "cpuspeed": 1000,
             "memory": 1024,
             "deploymentplanner": "FirstFitPlanner"
         },
@@ -32,7 +32,7 @@
             "name": "2",
             "displaytext": "FirstFitPlanner Large",
             "cpunumber": 1,
-            "cpuspeed": 100,
+            "cpuspeed": 2000,
             "memory": 2048,
             "deploymentplanner": "FirstFitPlanner"
         }

@@ -2,14 +2,14 @@
     "accounts": [
         {
             "email": "test@test.com",
-            "firstname": "1",
+            "firstname": "Test",
             "lastname": "User",
             "password": "password",
             "username": "1"
         },
         {
             "email": "test@test.com",
-            "firstname": "2",
+            "firstname": "Test",
             "lastname": "User",
             "password": "password",
             "username": "2"
@@ -20,10 +20,6 @@
             "day": 1,
             "newvms": [
                 {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
                     "account": "2",
                     "service_offering": "1"
                 },
@@ -32,19 +28,11 @@
                     "service_offering": "1"
                 },
                 {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
                     "account": "2",
                     "service_offering": "1"
                 },
                 {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
+                    "account": "2",
                     "service_offering": "1"
                 },
                 {
@@ -53,10 +41,22 @@
                 },
                 {
                     "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
                     "service_offering": "2"
                 },
                 {
                     "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
                     "service_offering": "1"
                 },
                 {
@@ -69,7 +69,268 @@
             "day": 2,
             "newvms": [
                 {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
                     "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                }
+            ]
+        },
+        {
+            "day": 3,
+            "newvms": [
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                }
+            ]
+        },
+        {
+            "day": 4,
+            "newvms": [
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                }
+            ]
+        },
+        {
+            "day": 5,
+            "newvms": [
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                }
+            ]
+        },
+        {
+            "day": 6,
+            "newvms": [
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                }
+            ]
+        },
+        {
+            "day": 7,
+            "newvms": [
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
                     "service_offering": "2"
                 },
                 {
@@ -85,12 +346,187 @@
                     "service_offering": "2"
                 },
                 {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
                     "account": "2",
                     "service_offering": "1"
                 },
                 {
                     "account": "1",
                     "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                }
+            ]
+        },
+        {
+            "day": 8,
+            "newvms": [
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                }
+            ]
+        },
+        {
+            "day": 9,
+            "newvms": [
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                }
+            ]
+        },
+        {
+            "day": 10,
+            "newvms": [
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
                 },
                 {
                     "account": "1",
@@ -113,12 +549,1392 @@
                     "service_offering": "1"
                 }
             ]
+        },
+        {
+            "day": 11,
+            "newvms": [
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                }
+            ]
+        },
+        {
+            "day": 12,
+            "newvms": [
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                }
+            ]
+        },
+        {
+            "day": 13,
+            "newvms": [
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                }
+            ]
+        },
+        {
+            "day": 14,
+            "newvms": [
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                }
+            ]
+        },
+        {
+            "day": 15,
+            "newvms": [
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                }
+            ]
+        },
+        {
+            "day": 16,
+            "newvms": [
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                }
+            ]
+        },
+        {
+            "day": 17,
+            "newvms": [
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                }
+            ]
+        },
+        {
+            "day": 18,
+            "newvms": [
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                }
+            ]
+        },
+        {
+            "day": 19,
+            "newvms": [
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                }
+            ]
+        },
+        {
+            "day": 20,
+            "newvms": [
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                }
+            ]
+        },
+        {
+            "day": 21,
+            "newvms": [
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                }
+            ]
+        },
+        {
+            "day": 22,
+            "newvms": [
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                }
+            ]
+        },
+        {
+            "day": 23,
+            "newvms": [
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                }
+            ]
+        },
+        {
+            "day": 24,
+            "newvms": [
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                }
+            ]
+        },
+        {
+            "day": 25,
+            "newvms": [
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                }
+            ]
+        },
+        {
+            "day": 26,
+            "newvms": [
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                }
+            ]
+        },
+        {
+            "day": 27,
+            "newvms": [
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                }
+            ]
+        },
+        {
+            "day": 28,
+            "newvms": [
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                }
+            ]
+        },
+        {
+            "day": 29,
+            "newvms": [
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                }
+            ]
+        },
+        {
+            "day": 30,
+            "newvms": [
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1"
+                }
+            ]
         }
     ],
     "service_offerings": [
         {
             "cpunumber": 1,
-            "cpuspeed": 100,
+            "cpuspeed": 1000,
             "deploymentplanner": "FirstFitPlanner",
             "displaytext": "FirstFitPlanner Small",
             "memory": 1024,
@@ -126,7 +1942,7 @@
         },
         {
             "cpunumber": 1,
-            "cpuspeed": 100,
+            "cpuspeed": 2000,
             "deploymentplanner": "FirstFitPlanner",
             "displaytext": "FirstFitPlanner Large",
             "memory": 2048,
