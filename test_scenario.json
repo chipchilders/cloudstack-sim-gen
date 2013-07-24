@@ -2,14 +2,14 @@
     "accounts": [
         {
             "email": "test@test.com",
-            "firstname": "Test",
+            "firstname": "1",
             "lastname": "User",
             "password": "password",
             "username": "1"
         },
         {
             "email": "test@test.com",
-            "firstname": "Test",
+            "firstname": "2",
             "lastname": "User",
             "password": "password",
             "username": "2"

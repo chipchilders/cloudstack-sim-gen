@@ -21,12 +21,11 @@ from marvin.integration.lib.common import get_zone, get_domain, get_template, cl
 import json
 import os
 import sys
+import pprint
 
 from nose.plugins.attrib import attr
 
 class Services:
-
-    self.scenario = None
 
     def __init__(self):
         self.services = {
@@ -36,7 +35,7 @@ class Services:
             }
         }
 
-        input_json_file = open('test_scenario.json', 'r')
+        input_json_file = open('/home/sg-user/cloudstack-sim-gen/test_scenario.json', 'r')
         self.services["scenario"] = json.loads(input_json_file.read())
         input_json_file.close()
 
@@ -49,7 +48,7 @@ class TestScenario(cloudstackTestCase):
 
     def find_account(self, value_to_find):
         for account in self.accounts:
-            if account.username == value_to_find:
+            if account.__dict__["name"].startswith(value_to_find + "-"):
                 return account
         raise Exception("Couldn't find the account name.")
 
@@ -60,6 +59,8 @@ class TestScenario(cloudstackTestCase):
         raise Exception("Couldn't find the service_offering name.")
 
     def setUp(self):
+        self.pp = pprint.PrettyPrinter(indent=4, depth=6)
+
         self.apiclient = super(TestScenario, self).getClsTestClient().getApiClient()
         self.services = Services().services
         # Get Zone, Domain and templates
@@ -72,11 +73,11 @@ class TestScenario(cloudstackTestCase):
         )
 
         self.accounts = []
-        for each account in self.services["scenario"]["accounts"]:
+        for account in self.services["scenario"]["accounts"]:
             self.accounts.append(self.CreateAccount(account))
 
         self.service_offerings = []
-        for each service_offering in self.services["scenario"]["service_offerings"]:
+        for service_offering in self.services["scenario"]["service_offerings"]:
             self.service_offerings.append(self.CreateServiceOffering(service_offering))
 
         self.cleanup = [
@@ -102,8 +103,8 @@ class TestScenario(cloudstackTestCase):
         """Test to deploy vms using the defined scenario
         """
 
-        for each day in self.services["scenario"]["days"]:
-            for each newvm in day["newvms"]:
+        for day in self.services["scenario"]["days"]:
+            for newvm in day["newvms"]:
                 self.CreateVM(newvm)
 
     def CreateVM(self, newvm):
@@ -112,9 +113,9 @@ class TestScenario(cloudstackTestCase):
             self.apiclient,
             self.services["virtual_machine"],
             zoneid=self.zone.id,
-            domainid=self.account.domainid,
+            domainid=self.domain.id,
             templateid=self.template.id,
-            accountid=self.find_account(newvm["account"]).id,
+            accountid=self.find_account(newvm["account"]).__dict__["name"],
             serviceofferingid=self.find_service_offering(newvm["service_offering"]).id
         )
 
