@@ -142,9 +142,9 @@ class TestScenario(cloudstackTestCase):
 
         vm = 0
         day = 0
-        for day in self.services["scenario"]["days"]:
+        for daydef in self.services["scenario"]["days"]:
             day+=1
-            for newvm in day["newvms"]:
+            for newvm in daydef["newvms"]:
                 vm+=1
                 self.CreateVM(newvm)
                 self.GetStats(day, vm)
