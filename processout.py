@@ -20,6 +20,13 @@ for datapoint in input_json["datapoints"]:
         dataline.append({"server": host["name"], "value": percentram})
     data.append(dataline)
 
+# create an empty initial dataline with the same length as the last dataline
+dataline = []
+for host in input_json["datapoints"][len(input_json["datapoints"])-1]["hosts"]:
+    dataline.append({"server": host["name"], "value": 0})
+data.insert(0, dataline)
+
+
 jt += json.dumps(data, sort_keys=True, indent=4, separators=(',', ': '))
 
 jt += ";\n"
