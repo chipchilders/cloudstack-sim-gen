@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Cloudstack-sim-gen by chipchilders</title>
+    <title>Cloudstack Simulation Generator by chipchilders</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -13,10 +13,11 @@
     <![endif]-->
   </head>
   <body>
+<a href="https://github.com/chipchilders/cloudstack-sim-gen/"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
     <div class="wrapper">
       <header>
-        <h1>Cloudstack-sim-gen</h1>
-        <p></p>
+        <h1>Cloudstack Simulation Generator</h1>
+        <p>A working prototype indended to help generate scenarios that can be run against the Apache CloudStack management server, specifically when running in simulator mode.</p>
 
         <p class="view"><a href="https://github.com/chipchilders/cloudstack-sim-gen">View the Project on GitHub <small>chipchilders/cloudstack-sim-gen</small></a></p>
 
@@ -25,10 +26,127 @@
           <li><a href="https://github.com/chipchilders/cloudstack-sim-gen/zipball/master">Download <strong>ZIP File</strong></a></li>
           <li><a href="https://github.com/chipchilders/cloudstack-sim-gen/tarball/master">Download <strong>TAR Ball</strong></a></li>
           <li><a href="https://github.com/chipchilders/cloudstack-sim-gen">View On <strong>GitHub</strong></a></li>
-        </ul>
+      </ul>
+
+      <p>My other projects are on <a href="http://chipchilders.github.io/">chipchilders.github.io</a>.</p>
       </header>
       <section>
-        <p>This is a working prototype indended to help generate scenarios that can be run against the Apache CloudStack management server, specifically when running in simulator mode.</p>
+        <h1>
+<a name="cloudstack-sim-gen" class="anchor" href="#cloudstack-sim-gen"><span class="octicon octicon-link"></span></a>cloudstack-sim-gen</h1>
+
+<p>Fair warning - these scripts and files are likely filled with bugs and are likely to need editing to remove things like hardcoded paths that are specific to my environment. ;-)</p>
+<p><strong>The Process</strong></p>
+<p>First, the <a href="https://github.com/chipchilders/cloudstack-sim-gen/tree/20130725">cloudstack-sim-gen</a>&nbsp;repo has a set of files used to construct, generate and run the test scenarios. Here's a walkthough of the files (listed in the order of their involvement in the process):</p>
+<ul>
+<li><a href="https://github.com/chipchilders/cloudstack-sim-gen/blob/20130725/inputsample">inputsample</a>&nbsp;- This is the json file that you use to describe your scenario.</li>
+<li><a href="https://github.com/chipchilders/cloudstack-sim-gen/blob/20130725/generate.py">generate.py</a> - Script that takes inputsample and generates an output JSON document that gives the scenario test runner something to work from.</li>
+<li><a href="https://github.com/chipchilders/cloudstack-sim-gen/blob/20130725/test_scenario.json">test_scenario.json</a> - A sample generated scenario (from the inputsample file).</li>
+<li><a href="https://github.com/chipchilders/cloudstack-sim-gen/blob/20130725/test_scenario.py">test_scenario.py</a> - A <a href="https://cwiki.apache.org/confluence/display/CLOUDSTACK/Marvin+-+Testing+with+Python">Marvin framework</a> python script, that is intended to be used from within the CloudStack tests/integration/ folder, which takes test_scenario.json and runs through the scenario. Currently only supports adding new VMs and incremental cluster additions when memory capacity of the zone hits a threashold.</li>
+<li><a id="1d05098feaccf51fba1118b20ef51d43-dd9665b8accdafc96afdcc48f33c7f2ba32a81fd" class="js-directory-link" title="test_scenario.out" href="https://github.com/chipchilders/cloudstack-sim-gen/blob/20130725/test_scenario.out">test_scenario.out</a>&nbsp;- A sample output file from the stats collected by a run of the sample test scenario.</li>
+<li><a id="e57a0982ba0a796300fbf46894753829-1eec620d373047f71895681f6000211a94c49e69" class="js-directory-link" title="processout.py" href="https://github.com/chipchilders/cloudstack-sim-gen/blob/20130725/processout.py">processout.py</a>&nbsp;- A script to transform the data from test_scenario.out into something that can be charted more easily by the d3.js code.</li>
+<li><a id="0d51823f6d0f82ef5b4a7dcf931ac52e-e7ac268dc1c1e92bbc7bd17bd1114190f03c321f" class="js-directory-link" title="test_scenario_out.json" href="https://github.com/chipchilders/cloudstack-sim-gen/blob/20130725/test_scenario_out.json">test_scenario_out.json</a>&nbsp;- The output of processout.py.</li>
+</ul>
+<p><strong>Digging into the Scenario Definition</strong></p>
+<p>The example scenario that I'm using is relatively small, and the features available are still limited. However it has served as a great way to debug the overall process. &nbsp;</p>
+<p>Let's look at the inputsample file's contents section by section:</p>
+<p>The first section includes the high level rules for the scenario, including setting the number of simulated "days" for the scenario, a virtual machine growth (per day) equation, and two dispersion weighting arrays to help the generator select the appropriate offerings and accounts to use when creating the VMs.</p>
+<pre>    "number_of_days": 30,
+    "vm_growth": "10+(x*0.2)+pow(x*0.2,0.5)",
+    "offering_dispersion": [7,3],
+    "account_dispersion": [5,5],
+</pre>
+<p>The scenario model uses "days" as logical units of time, within which VM's will be created. The vm_growth equation is evaluated from 1 to the max number of days specified. Any valid Python mathamatical routine should work here, assuming that "x" (day) is the only variable used in the code. If you wanted a simple N VM's per day, you would just put that number into the field. In the scenario I'm testing with, I looked for a gradual increase from a starting point of 11 as seen below:</p>
+<p><span class="full-image-block ssNonEditable"><span><img src="/storage/post-images/vmscenario.png?__SQUARESPACE_CACHEVERSION=1374788333649" alt="" /></span></span></p>
+<p>Hopefully the use of Python eval() in that setting will provide for lots of flexibility in how the growth can be modeled.</p>
+<p>The dispersion settings are used to be passed into a weighted dispersion method of the generator as each VM is created. The offering dispersion will weight the selection from among the defined compute service offerings, while the account dispersion does the same for defined accounts. You should be sure to have the same number of elements of the dispersion lists as you have of the relevant definitions.</p>
+<p>To me, one of the more interesting aspects of modeling scenarios is to include capacity growth for the cloud itself. The capacity_increase_rules dictionary is how to describe the rules that you want to follow during the scenario run.</p>
+<pre>    "capacity_increase_rules": {
+        "target_resource": "memory",
+        "threashold": 85,
+        "cluster_size": 8
+    },
+</pre>
+<p>Three attributes are available (although only 2 are used right now). target_resource is defined for future use (not implemented). Threashold is the percentage of the target resource (memory only now) at the zone level that will trigger the addition of a new cluster into the simulator's environment. Cluster_size defines the number of hosts that will be added within each new cluster.</p>
+<p>That leads to the definitions of accounts. You'll notice that only the username field needs to be unique below:</p>
+<pre>    "accounts": [
+    {
+            "email": "test@test.com",
+            "firstname": "Test",
+            "lastname": "User",
+            "username": "1",
+            "password": "password"
+        },
+    {
+            "email": "test@test.com",
+            "firstname": "Test",
+            "lastname": "User",
+            "username": "2",
+            "password": "password"
+        }
+    ],
+</pre>
+<p>Similar to the account definitions, the service offerings are defined with:</p>
+<pre>    "service_offerings": [
+        {
+            "name": "1",
+            "displaytext": "FirstFitPlanner Small",
+            "cpunumber": 1,
+            "cpuspeed": 1000,
+            "memory": 1024,
+            "deploymentplanner": "FirstFitPlanner"
+        },
+        {
+            "name": "2",
+            "displaytext": "FirstFitPlanner Large",
+            "cpunumber": 1,
+            "cpuspeed": 2000,
+            "memory": 2048,
+            "deploymentplanner": "FirstFitPlanner"
+        }
+    ]
+</pre>
+<p>The offerings offer a bit more flexibility. Name must be unique, but the value of having multiple offerings is to be able to vary the CPU, RAM and selected deployment planner for the offerings.</p>
+<p><strong>Running the Scenario</strong></p>
+<p>To run the scenario, you'll need to move the test_scenario.py file into your cloudstack/test/integration/smoke folder. &nbsp;You'll also have to edit that script to point to the appropriate location to find the generated scenario json file. &nbsp;You'll also have to edit that script to name an appropriate output file for the collected statistics.</p>
+<ol>
+<li>Simulator Configuration: Copy the <a href="https://gist.github.com/chipchilders/6056220#file-advanced-large-cfg">contents of this gist</a> into a file named advanced-32host.cfg within the setup/dev folder.</li>
+<li>Compile and Configure: run the following: mvn -Pdeveloper -Dsimulator clean install; mvn -Pdeveloper -pl developer -Ddeploydb; mvn -Pdeveloper -pl developer -Ddeploydb-simulator; mvn -pl client jetty:run</li>
+<li>Setup Zone: Once the mgmt server is running, in a new terminal run the followign: mvn -Pdeveloper,marvin.setup -Dmarvin.config=setup/dev/advanced-32host.cfg -pl :cloud-marvin integration-test</li>
+<li>Restart Mgmt Server: In order for the new global settings to take effect, CTRL-C on the mgmt server's terminal, wait for it to start, and then run the following to restart it: mvn -pl client jetty:run</li>
+<li>Run the Scenario: In another terminal window, run: nosetests --with-marvin --marvin-config=setup/dev/advanced-32host.cfg --load test/integration/smoke/test_scenario.py</li>
+</ol>
+<p><strong>Collected Data</strong></p>
+<p>Once the scenario is complete, you should have the specified statistics output file filled with useful data. The format of the output file is JSON, and is structured as follows:</p>
+<p>The top level object is called "datapoints", which is an array dictionaries that includes capacity data collected after every new VM is created. The dictionary objects include:</p>
+<ul>
+<li>day - integer representing the logical "day" from the scenario</li>
+<li>vm - the integer representing the VM count</li>
+<li>hosts - an array of the simulated hosts, each containing:     
+<ul>
+<li>cpuallocated - amount of CPU allocated from the host</li>
+<li>cpunumber - number of CPUs on the host</li>
+<li>cpuspeed - CPU speed</li>
+<li>cpuused - percentage of CPU used</li>
+<li>cpuwithoverprovisioning - Speed * CPU number * oversubscription</li>
+<li>memoryallocated - the amount of RAM allocated from the host</li>
+<li>memorytotal - total RAM of the host</li>
+<li>memoryused - used RAM of the host</li>
+<li>name - the name of the host</li>
+</ul>
+</li>
+<li>zone / capacity - an array of "capacity" elements collected from the zone list API call (passing in showcapacities=True)</li>
+</ul>
+<p>It's important to note that some of the collected data isn't accurately shown when running against the simulator. In particular, the CPU host numbers are empty right now and the "used" values will always be 0 (because we are simulating!). Since memory is, in my experience, typically the major capacity concern for hosts, I've ignored CPU so far and focused on memory for all aspects of the modeling / data collection process. As the collected data improves, I'll include better scenario planning around more and more capacity elements.</p>
+<p><strong>Visualizing the Scenario</strong></p>
+<p>I'm still working on how to best visualize the filling of individual hosts in the simulated environment, but here's a basic start (based off of the charting I did with a static number of hosts earlier):</p>
+<p><iframe width="600" src="http://chipchilders.github.io/charting-cloudstack-planners/initial_simulated_growth.html"></iframe></p>
+<p>That doesn't help understand the zone itself though, so I modified my processout.py file to spit out a CSV that tracks the zone-level Memory and CPU totals and percentage allocated. Dropping the data into Excel, I'm able to then quickly chart memory and CPU trends during the simulation.</p>
+<p>Zone-wide Memory:</p>
+<p><span class="full-image-block ssNonEditable"><span><img src="/storage/post-images/memory-over-time-scenario.png?__SQUARESPACE_CACHEVERSION=1374793676299" alt="" /></span></span></p>
+<p>Zone-wide CPU:</p>
+<p><span class="full-image-block ssNonEditable"><span><img src="/storage/post-images/cpu-over-time-scenario.png?__SQUARESPACE_CACHEVERSION=1374793785727" alt="" /></span></span></p>
+<p>Again, not sophisticated at all right now. I'm building to a much better way to visualize the overall capacity of the zone over time still. More posts to come.</p>
+
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/chipchilders">chipchilders</a></p>
