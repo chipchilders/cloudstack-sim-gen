@@ -56,7 +56,7 @@
     "account_dispersion": [5,5],
 </pre>
 <p>The scenario model uses "days" as logical units of time, within which VM's will be created. The vm_growth equation is evaluated from 1 to the max number of days specified. Any valid Python mathamatical routine should work here, assuming that "x" (day) is the only variable used in the code. If you wanted a simple N VM's per day, you would just put that number into the field. In the scenario I'm testing with, I looked for a gradual increase from a starting point of 11 as seen below:</p>
-<p><span class="full-image-block ssNonEditable"><span><img src="/storage/post-images/vmscenario.png?__SQUARESPACE_CACHEVERSION=1374788333649" alt="" /></span></span></p>
+<p><span class="full-image-block ssNonEditable"><span><img src="http://chipchilders.squarespace.com/storage/post-images/vmscenario.png?__SQUARESPACE_CACHEVERSION=1374788333649" alt="" /></span></span></p>
 <p>Hopefully the use of Python eval() in that setting will provide for lots of flexibility in how the growth can be modeled.</p>
 <p>The dispersion settings are used to be passed into a weighted dispersion method of the generator as each VM is created. The offering dispersion will weight the selection from among the defined compute service offerings, while the account dispersion does the same for defined accounts. You should be sure to have the same number of elements of the dispersion lists as you have of the relevant definitions.</p>
 <p>To me, one of the more interesting aspects of modeling scenarios is to include capacity growth for the cloud itself. The capacity_increase_rules dictionary is how to describe the rules that you want to follow during the scenario run.</p>
@@ -137,16 +137,6 @@
 <li>zone / capacity - an array of "capacity" elements collected from the zone list API call (passing in showcapacities=True)</li>
 </ul>
 <p>It's important to note that some of the collected data isn't accurately shown when running against the simulator. In particular, the CPU host numbers are empty right now and the "used" values will always be 0 (because we are simulating!). Since memory is, in my experience, typically the major capacity concern for hosts, I've ignored CPU so far and focused on memory for all aspects of the modeling / data collection process. As the collected data improves, I'll include better scenario planning around more and more capacity elements.</p>
-<p><strong>Visualizing the Scenario</strong></p>
-<p>I'm still working on how to best visualize the filling of individual hosts in the simulated environment, but here's a basic start (based off of the charting I did with a static number of hosts earlier):</p>
-<p><iframe width="600" src="http://chipchilders.github.io/charting-cloudstack-planners/initial_simulated_growth.html"></iframe></p>
-<p>That doesn't help understand the zone itself though, so I modified my processout.py file to spit out a CSV that tracks the zone-level Memory and CPU totals and percentage allocated. Dropping the data into Excel, I'm able to then quickly chart memory and CPU trends during the simulation.</p>
-<p>Zone-wide Memory:</p>
-<p><span class="full-image-block ssNonEditable"><span><img src="/storage/post-images/memory-over-time-scenario.png?__SQUARESPACE_CACHEVERSION=1374793676299" alt="" /></span></span></p>
-<p>Zone-wide CPU:</p>
-<p><span class="full-image-block ssNonEditable"><span><img src="/storage/post-images/cpu-over-time-scenario.png?__SQUARESPACE_CACHEVERSION=1374793785727" alt="" /></span></span></p>
-<p>Again, not sophisticated at all right now. I'm building to a much better way to visualize the overall capacity of the zone over time still. More posts to come.</p>
-
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/chipchilders">chipchilders</a></p>
