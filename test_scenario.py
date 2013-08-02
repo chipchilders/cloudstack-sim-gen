@@ -154,6 +154,12 @@ class TestScenario(cloudstackTestCase):
             cap["capacity"].append(capacity.__dict__)
         return cap
 
+    def CheckForKeyElseReturnZero(self, thing, keyname):
+        if keyname in thing:
+            return thing[keyname]
+        else:
+            return 0
+
     def GetHostStats(self):
         hosts_list = Host.list(self.apiclient)
         statarr = []
@@ -161,14 +167,14 @@ class TestScenario(cloudstackTestCase):
             if "cpuallocated" in host.__dict__:
                 statarr.append({
                     "name": host.__dict__["name"],
-                    "cpuwithoverprovisioning": host.__dict__["cpuwithoverprovisioning"],
-                    "cpunumber": host.__dict__["cpunumber"],
-                    "cpuallocated": host.__dict__["cpuallocated"],
-                    "cpuused": host.__dict__["cpuused"],
-                    "cpuspeed": host.__dict__["cpuspeed"],
-                    "memorytotal": host.__dict__["memorytotal"],
-                    "memoryused": host.__dict__["memoryused"],
-                    "memoryallocated": host.__dict__["memoryallocated"]
+                    "cpuwithoverprovisioning": self.CheckForKeyElseReturnZero(host.__dict__, "cpuwithoverprovisioning"),
+                    "cpunumber": self.CheckForKeyElseReturnZero(host.__dict__, "cpunumber"),
+                    "cpuallocated": self.CheckForKeyElseReturnZero(host.__dict__, "cpuallocated"),
+                    "cpuused": self.CheckForKeyElseReturnZero(host.__dict__, "cpuused"),
+                    "cpuspeed": self.CheckForKeyElseReturnZero(host.__dict__, "cpuspeed"),
+                    "memorytotal": self.CheckForKeyElseReturnZero(host.__dict__, "memorytotal"),
+                    "memoryused": self.CheckForKeyElseReturnZero(host.__dict__, "memoryused"),
+                    "memoryallocated": self.CheckForKeyElseReturnZero(host.__dict__, "memoryallocated")
                     })
 
         return statarr
@@ -320,6 +326,7 @@ class TestScenario(cloudstackTestCase):
 
     def tearDown(self):
         stats = { "datapoints": self.datapoints }
+        print stats
         self.file_to_write.write(json.dumps(stats, sort_keys=True, indent=4, separators=(',', ': ')))
         self.file_to_write.close()
         try:
