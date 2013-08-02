@@ -16,9 +16,9 @@
         }
     ],
     "capacity_increase_rules": {
+        "cluster_size": 8,
         "target_resource": "memory",
-        "threashold": 85,
-        "cluster_size": 8
+        "threashold": 85
     },
     "days": [
         {
@@ -26,97 +26,129 @@
             "newvms": [
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "6393407d-21f1-4e74-843d-a299ca3a4fd1"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "e5f3e6d8-b9f8-4c0f-ba3b-c04ee0b6b113"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "ce14b866-8763-47e0-9577-caf280e27c67"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "e935b1e9-ac62-4a9c-ba06-f0e8d0aae6db"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "7e923f5d-0255-45fb-b38c-c0f3eb2eac0c"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "eb2bbebc-b4b6-4420-be53-24453abf65a4"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "9fa57ea7-1241-42b9-83e3-0a25bf81f082"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "c184ab6a-2394-454f-b30e-d1e96a4baa71"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "120d615e-43ea-46e7-a89e-c26cfc261f7a"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "7c244307-ef81-4ca9-8888-ce0118742c43"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "a654d234-5940-42db-93dc-25163d5f0c9a"
                 }
+            ],
+            "removedvms": [
+                "e935b1e9-ac62-4a9c-ba06-f0e8d0aae6db",
+                "e5f3e6d8-b9f8-4c0f-ba3b-c04ee0b6b113",
+                "a654d234-5940-42db-93dc-25163d5f0c9a"
             ]
         },
         {
             "day": 2,
             "newvms": [
                 {
-                    "account": "2",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "76b1f9ed-7d96-44e8-ae50-159dd4001642"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "d9960964-76d0-47fa-817c-7f22aeeaf166"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "37d40736-fa3c-4ccd-a080-0524815a7cd4"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "ecc02aee-a9ba-4067-9a12-45639f4c21d8"
                 },
                 {
                     "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "ddf8329c-19f3-4034-a634-fbed8f9959e2"
                 },
                 {
                     "account": "2",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "02995547-52c6-4738-bf04-ef447d8d2630"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "d558f274-4c6b-481b-bc32-f4d150a07d95"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "fe52c138-3371-4529-bf3c-9d88b98d19ae"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "cbd63013-4d36-4fea-833e-eee641ba2265"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "2b7c56a4-fbe7-47b4-8f1e-247252eea5ac"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "f98a45e6-e025-47f8-b9f2-094fc9f3554a"
                 }
+            ],
+            "removedvms": [
+                "7c244307-ef81-4ca9-8888-ce0118742c43",
+                "d9960964-76d0-47fa-817c-7f22aeeaf166",
+                "02995547-52c6-4738-bf04-ef447d8d2630"
             ]
         },
         {
@@ -124,154 +156,206 @@
             "newvms": [
                 {
                     "account": "1",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "9750940d-b18b-4fcc-b956-3f68ec9abb34"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "34995b09-94ec-4e1c-ae5d-0b99f4ce0d99"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "dae9709e-792c-485d-a0c2-e407a1225580"
                 },
                 {
                     "account": "2",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "9b667d8b-3ea6-4512-b482-65fdd944de44"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "643a3070-f978-4416-a5cc-30c4da7a36a5"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "8349df31-523e-4a20-8566-f583dc45dcaf"
                 },
                 {
                     "account": "1",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "6800587a-b005-4dd4-abcd-c2a812243440"
                 },
                 {
                     "account": "2",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "2"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "bc393543-7c35-498d-a4f9-e309b3253b4b"
                 },
                 {
                     "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "3bfaeb28-121a-4ce4-8919-e22a02b52bdb"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "36ed9b5f-eda1-4614-8558-e2d4c2fd95c7"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "b7fc4834-6c17-4419-975a-59e6547277fe"
                 }
+            ],
+            "removedvms": [
+                "120d615e-43ea-46e7-a89e-c26cfc261f7a",
+                "c184ab6a-2394-454f-b30e-d1e96a4baa71",
+                "76b1f9ed-7d96-44e8-ae50-159dd4001642"
             ]
         },
         {
             "day": 4,
             "newvms": [
                 {
-                    "account": "1",
-                    "service_offering": "2"
-                },
-                {
                     "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "bbf92f84-1898-4143-a812-fb3024a90292"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "4cea9323-6836-4fb5-967a-e5b762c50da4"
                 },
                 {
                     "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "fd132b86-df5b-4409-8d32-5d4b07c26c62"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "3c8c5603-947e-4127-90f4-ae5a2e3c5e71"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "ea9ae0aa-1499-4746-ac2d-b85904db4399"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "b0bc268c-5f9c-4c99-b6bd-e18cfcf9a45c"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "8efabd39-9c39-4e5c-9213-360b76ae1b2a"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "1872e303-d37c-4384-9e9f-1b3c9e5d9a02"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "888d0b47-dfcd-46eb-a77f-eb8795f60c0d"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "629b2d1d-3b43-4dd8-9af1-e8ff332c8d99"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "9bb2aafc-fb56-41d6-8a92-0e51c83b994b"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "fde1e9ff-b2a1-4765-8b99-cab36df7c732"
                 }
+            ],
+            "removedvms": [
+                "6800587a-b005-4dd4-abcd-c2a812243440",
+                "6393407d-21f1-4e74-843d-a299ca3a4fd1",
+                "34995b09-94ec-4e1c-ae5d-0b99f4ce0d99",
+                "fde1e9ff-b2a1-4765-8b99-cab36df7c732"
             ]
         },
         {
             "day": 5,
             "newvms": [
                 {
-                    "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "9dd59ef0-dac6-4bfe-8c50-fbfbf623f7e1"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "b504f06a-d647-47ed-b33c-467325f3a113"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "e0c60e60-224e-4d63-a9b3-9823297c5fbc"
                 },
                 {
                     "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "aee34cd4-5328-4383-962b-625642b6bcc0"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "518338c3-e920-4a51-af20-d035de9565e0"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "f4c5e40d-f76e-4210-9ff4-6e808308f24f"
                 },
                 {
                     "account": "2",
-                    "service_offering": "2"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "09b266d4-c57b-46c1-a784-999d08ae6872"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "5be6aafa-0e0f-44d9-8072-986500e48523"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "57b56c9b-7f11-4bee-b48f-ba26e71c6465"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "9ac87678-b08b-405f-ae79-14fa7bf35a76"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "905773dc-fd75-4c00-a9e2-6be6f13b1a11"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "a90b0fb5-a4b9-4fa0-a16e-0dd87fd928aa"
                 }
+            ],
+            "removedvms": [
+                "7e923f5d-0255-45fb-b38c-c0f3eb2eac0c",
+                "3c8c5603-947e-4127-90f4-ae5a2e3c5e71",
+                "f4c5e40d-f76e-4210-9ff4-6e808308f24f",
+                "ce14b866-8763-47e0-9577-caf280e27c67"
             ]
         },
         {
@@ -279,52 +363,70 @@
             "newvms": [
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "c80cabc2-6866-40f9-bd1e-2fad58634268"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "d240fc69-b004-4bb5-8873-bed78f0e8c3f"
                 },
                 {
                     "account": "2",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "0bc08396-8b96-4a65-8c41-1a88861da836"
                 },
                 {
                     "account": "2",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "1101e152-b3a6-4bf8-8fa1-5aa62af6a076"
                 },
                 {
                     "account": "2",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "c57bf7ee-516f-4ace-a7a4-104c6feea647"
                 },
                 {
                     "account": "1",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "4a4692eb-4f4e-4245-a776-3c769725d6c8"
                 },
                 {
                     "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "aaedb6ec-d806-4b4f-85af-eda1324b4213"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "7cb83b83-d213-49f3-a5d7-6aa404b9b14c"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "36d00725-7759-44a5-9ba6-c8217b89727d"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "4f726d9c-c6ce-4b60-b26e-aa67731fbc84"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "d46e1990-0197-4ff3-981a-53dad3b32a9d"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "b5a586c5-298d-4d2e-a670-e96c64207911"
                 }
+            ],
+            "removedvms": [
+                "1872e303-d37c-4384-9e9f-1b3c9e5d9a02",
+                "fe52c138-3371-4529-bf3c-9d88b98d19ae",
+                "8efabd39-9c39-4e5c-9213-360b76ae1b2a",
+                "a90b0fb5-a4b9-4fa0-a16e-0dd87fd928aa"
             ]
         },
         {
@@ -332,56 +434,76 @@
             "newvms": [
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "514bce0c-1d78-48cd-a458-d57ffcf24d50"
                 },
                 {
                     "account": "2",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "a400d52c-e7f6-4c52-8c2f-e9781118bb96"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "bf877e71-efff-4c51-a3b5-fe8e8ff91c2f"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "d557f558-b1c1-47c2-9158-d599fa894a45"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "cab86e4d-f277-4179-945c-35748eec2a8b"
                 },
                 {
                     "account": "2",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "12bbb783-4363-4cb0-a6bf-31437ba2d72c"
                 },
                 {
                     "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "5ec592ec-7da0-4de3-a5ee-4177fc629d89"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "175febfe-7911-4fba-9276-6bc2eb992dcd"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "e9ab7684-3dc5-49ba-b4d6-6260bfd77b75"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "dd3ffee3-4f0f-4cc7-98db-eba60005e0d1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "49ca2656-9305-47b4-a9e2-15f3a75126df"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "02b07751-f97e-4c72-83e6-9f65e25b38df"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "8834c098-83b5-460d-ae75-b2442a98db28"
                 }
+            ],
+            "removedvms": [
+                "4cea9323-6836-4fb5-967a-e5b762c50da4",
+                "02b07751-f97e-4c72-83e6-9f65e25b38df",
+                "cab86e4d-f277-4179-945c-35748eec2a8b",
+                "9fa57ea7-1241-42b9-83e3-0a25bf81f082",
+                "b0bc268c-5f9c-4c99-b6bd-e18cfcf9a45c"
             ]
         },
         {
@@ -389,56 +511,76 @@
             "newvms": [
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "1673a242-bf65-4539-a48a-8305d7404626"
                 },
                 {
                     "account": "2",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "e5e365f2-1fd5-4dd4-a993-c47fafe9336e"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "348d3a10-0d2f-40de-9e0a-634724a0ad29"
                 },
                 {
                     "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "25323873-4546-47c0-9f9b-4c41a34209e6"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "9a09b96b-b3f3-4196-9938-c8216f2a086e"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "41b8cce2-f721-4d6e-8b00-6567ba2760dc"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "490f6b1e-f046-436f-a486-52e4e731d6a0"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "4b43c933-ac2a-4888-8d9c-c07893b76525"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "13e35e9a-30b1-434e-809b-3ac8aa08c0ec"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "e28d5f55-c51b-4203-8d0c-d5d297f7c6c4"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "e7427ff1-4f36-40c6-8b7b-d84905a0d8f2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "64f1b22d-b027-4a76-84e9-32363ad50f37"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "4817816c-0e80-4051-85d7-f13415493ada"
                 }
+            ],
+            "removedvms": [
+                "0bc08396-8b96-4a65-8c41-1a88861da836",
+                "25323873-4546-47c0-9f9b-4c41a34209e6",
+                "c80cabc2-6866-40f9-bd1e-2fad58634268",
+                "12bbb783-4363-4cb0-a6bf-31437ba2d72c",
+                "e5e365f2-1fd5-4dd4-a993-c47fafe9336e"
             ]
         },
         {
@@ -446,56 +588,76 @@
             "newvms": [
                 {
                     "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "8c37cdff-8422-4c52-8678-bdc4c814ce71"
                 },
                 {
                     "account": "2",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "1bae4352-60fd-4875-804b-04e2324da7c0"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "77b783b0-9e33-408f-ad8b-d965141d3207"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "0f676f01-128f-45dd-a4a6-9a93c8ec50a6"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "e4dd9e35-d7a1-46cf-8cc4-d2908bc7a6f7"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "dce8834e-6705-4edf-9eb0-af9a20b68e37"
                 },
                 {
                     "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "af808ef6-90f3-40d3-acfd-3d16f2d559bf"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "1a8ae1e0-984a-45f4-a350-dd281271e4eb"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "23559e2e-3ab6-48f8-9691-c12f261e2772"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "63793eac-7893-44e0-8e88-685845d3ab89"
                 },
                 {
-                    "account": "2",
-                    "service_offering": "2"
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "25ecbe75-b63f-4d43-aa7b-59e2a9ae6895"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "69f0a902-42e6-4735-862e-51410e454733"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "4ae33e8f-0ee8-4f37-a07b-3c6e331c5561"
                 }
+            ],
+            "removedvms": [
+                "d46e1990-0197-4ff3-981a-53dad3b32a9d",
+                "cbd63013-4d36-4fea-833e-eee641ba2265",
+                "25ecbe75-b63f-4d43-aa7b-59e2a9ae6895",
+                "d557f558-b1c1-47c2-9158-d599fa894a45",
+                "fd132b86-df5b-4409-8d32-5d4b07c26c62"
             ]
         },
         {
@@ -503,56 +665,76 @@
             "newvms": [
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "8e906554-3a4d-4234-8225-8294f4c4e982"
                 },
                 {
                     "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "abf3eede-df11-42ec-a982-82ca9df5323a"
                 },
                 {
                     "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "8f976c4d-59ce-44e6-aa1b-3f1022c47c09"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "f1012d0a-1914-450a-a8b0-4844daa6363f"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "2c4cd835-b57d-4a84-9470-a08ec639ae3e"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "1b261e9b-057d-4f50-8736-4a8fe19e3405"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "c91612ea-fa9f-458c-af9b-6b44c042c0f0"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "3d8813b5-a3f3-4a6e-aa91-1cdf52a58813"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "df3fc5a7-56d2-4ad2-a3da-c49faed50558"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "bcae2a5a-b400-4589-b534-9686ec8a4a82"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "7b2e06f8-a877-4b61-94d4-55435eb2388d"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "8fbb8509-aec7-4717-8226-a9f865d9f5df"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "b1790195-d8d8-4683-aedf-eacce2dac182"
                 }
+            ],
+            "removedvms": [
+                "4ae33e8f-0ee8-4f37-a07b-3c6e331c5561",
+                "f1012d0a-1914-450a-a8b0-4844daa6363f",
+                "49ca2656-9305-47b4-a9e2-15f3a75126df",
+                "b1790195-d8d8-4683-aedf-eacce2dac182",
+                "9a09b96b-b3f3-4196-9938-c8216f2a086e"
             ]
         },
         {
@@ -560,60 +742,82 @@
             "newvms": [
                 {
                     "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "6df2a36f-8a59-4d45-bd35-33ea7df9b9c6"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "088cb62d-fa11-4c4a-bf9e-b096e4fb8940"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "669d4f52-57b3-4af1-baa0-18bdf5884794"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "e32786bf-086d-45a3-b137-522bd817a954"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "d3aea7ef-b3d6-407e-962e-75427b32f0fd"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "ee517e2e-9032-4296-96db-f223d1ae5f70"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "10e159ed-3cf4-4c14-bf6a-436a9f33cbba"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "8c491e22-de81-443c-be53-0eb5ec76b151"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "ba7f9e05-ed47-4179-a3db-353b4b69eb68"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "3e33049f-4e9f-4e7e-8331-0ace6e6680e9"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "749144f5-67ca-432a-95b5-0cf46ada379b"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "5c092243-dfbd-40e4-a80e-57c3bbf4c434"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "5c0855be-2a3f-467e-993f-490b4db35f55"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "ce1cb542-de86-4146-9e0d-3381596788a2"
                 }
+            ],
+            "removedvms": [
+                "36ed9b5f-eda1-4614-8558-e2d4c2fd95c7",
+                "643a3070-f978-4416-a5cc-30c4da7a36a5",
+                "5c0855be-2a3f-467e-993f-490b4db35f55",
+                "4f726d9c-c6ce-4b60-b26e-aa67731fbc84",
+                "f98a45e6-e025-47f8-b9f2-094fc9f3554a",
+                "b5a586c5-298d-4d2e-a670-e96c64207911"
             ]
         },
         {
@@ -621,60 +825,82 @@
             "newvms": [
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "63b1df4b-29a2-49f9-9fab-34dbef5e2531"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "3115ed4f-c5c4-497d-b0b6-afcd3e4940a9"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "18de1164-5086-403e-a511-6c43b03e26d6"
                 },
                 {
                     "account": "2",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "dddfa625-58ca-4ecb-8c9c-608313ec83ab"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "e72074ea-0223-4fe0-a6cc-62866ff662e6"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "783fbabc-ec60-46a8-8c42-c90dcd9c0acf"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "eb56ffbd-a725-41f5-b099-666add00d8dd"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "2"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "361dbc66-61f8-4ae9-a715-72826a62c2a5"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "a7eeb79a-1a62-46ce-8fea-e4ca0d4e6163"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "38b0a803-2678-44e6-88ca-ab3fcafa405e"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "19cfbccb-cb36-4768-98f9-55d9207e5af5"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "ad2d63fd-2611-436d-aac9-79721d7f9f80"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "a6ae17b9-2bf9-41ca-b989-aaa2e77e6d70"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "84e9b4a6-6dfa-447f-a3fe-5393822d6bc3"
                 }
+            ],
+            "removedvms": [
+                "749144f5-67ca-432a-95b5-0cf46ada379b",
+                "490f6b1e-f046-436f-a486-52e4e731d6a0",
+                "175febfe-7911-4fba-9276-6bc2eb992dcd",
+                "aaedb6ec-d806-4b4f-85af-eda1324b4213",
+                "e9ab7684-3dc5-49ba-b4d6-6260bfd77b75",
+                "518338c3-e920-4a51-af20-d035de9565e0"
             ]
         },
         {
@@ -682,186 +908,254 @@
             "newvms": [
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "6bf0ad41-e9cd-4d95-b292-9e0153baaee9"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "be81aba9-e23a-4036-b560-af57ac44ddc4"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "a5782a87-fe2d-405d-bb45-de7678abb276"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "9f94393f-5197-4638-9e3b-518a176352d0"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "bcc91121-9d7c-43d9-a61f-d64f7f15a556"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "be127215-677d-43d5-8d74-0fd2afd1aa99"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "9334f646-9146-4c72-8cb8-5957e24edfcb"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "4101d8b4-9a7e-4345-87af-ec48f661c78e"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "c59fb77a-477e-4a41-b74e-ca2fb66ad839"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "56b99b00-5241-41f9-8fd5-ebe6b2055e7b"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "28140c08-22c1-440a-bc92-8a0a3fc174cb"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "c64b5913-104c-49b0-bd16-2d17cfdf8cf6"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "535db114-380f-40b7-aa52-c19522f2f04e"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "b9db8d4b-76e4-428b-b82f-6fb8fdaa16ca"
                 }
+            ],
+            "removedvms": [
+                "09b266d4-c57b-46c1-a784-999d08ae6872",
+                "38b0a803-2678-44e6-88ca-ab3fcafa405e",
+                "9750940d-b18b-4fcc-b956-3f68ec9abb34",
+                "18de1164-5086-403e-a511-6c43b03e26d6",
+                "6df2a36f-8a59-4d45-bd35-33ea7df9b9c6",
+                "783fbabc-ec60-46a8-8c42-c90dcd9c0acf"
             ]
         },
         {
             "day": 14,
             "newvms": [
                 {
-                    "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "2"
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "c18c58e8-b184-4dd7-b007-73e6d2540cee"
                 },
                 {
                     "account": "1",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "f0acc760-189f-445e-9ff3-d9b131d855dd"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "897b7a25-7826-4278-85e1-a8a4b762fb29"
                 },
                 {
                     "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "4c4e1c24-acb4-451e-ac27-2e264ef3602b"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "06821418-1b6a-43b8-bd31-160dd2a91a50"
                 },
                 {
                     "account": "1",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "a4e09b89-d860-441e-a024-b26fff7b029d"
                 },
                 {
                     "account": "2",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "3cdf2d0e-ea3a-492c-8fb0-115292486320"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "1bb543d3-49f9-42a7-9a94-c385cdcafa9c"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "d47efd69-02c3-46d0-9d14-d87072772670"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "8efae0ef-b6d1-45e1-9ed9-8c525a5fb911"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "5d1969fd-51a9-4125-bc5f-57be6ec6a0af"
                 },
                 {
                     "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "a81cff7b-fd90-4bb0-b4d1-30b03ed3066e"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "698bb9a7-7b69-470e-ac4b-392b70c8d704"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "7ee8ea04-15cd-405e-840e-907fbe13f193"
                 }
+            ],
+            "removedvms": [
+                "b504f06a-d647-47ed-b33c-467325f3a113",
+                "e72074ea-0223-4fe0-a6cc-62866ff662e6",
+                "e4dd9e35-d7a1-46cf-8cc4-d2908bc7a6f7",
+                "5d1969fd-51a9-4125-bc5f-57be6ec6a0af",
+                "698bb9a7-7b69-470e-ac4b-392b70c8d704",
+                "a5782a87-fe2d-405d-bb45-de7678abb276"
             ]
         },
         {
             "day": 15,
             "newvms": [
                 {
-                    "account": "1",
-                    "service_offering": "1"
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "6b677722-34a4-4887-af55-5986cbf02193"
                 },
                 {
                     "account": "1",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "9065a79d-0f07-4bc7-ab5e-201f72bc64a8"
                 },
                 {
                     "account": "2",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "43e7592a-fbcd-485b-ade2-e1974d04367f"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "a2468a29-e0fb-4468-a561-eb5e5063014d"
                 },
                 {
                     "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "3b06c3e7-70ee-4a4f-80e4-ce8ded52dabd"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "1b98fb43-74e2-471a-b6b3-239eefd4314c"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "c60f91b6-977d-479a-9bbf-6a787e7e2a6b"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "db3e9745-f686-4967-9f50-e22206641c60"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "6fca6f2d-d75b-466d-a6a7-31c6662b8556"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "4f3e5f90-2114-4df9-b124-4594b5459acf"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "1d41cff3-0e72-4b0d-bd06-69c446984117"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "2d4820a0-e164-4252-8322-0c4bd3f439d9"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "75515453-fc45-45ef-996c-5ab7558b56f7"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "92a5f214-4570-4fd4-9b9b-f7c11fc1f4e9"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "653620b7-f983-4740-9535-3a1c37db86fe"
                 }
+            ],
+            "removedvms": [
+                "4817816c-0e80-4051-85d7-f13415493ada",
+                "629b2d1d-3b43-4dd8-9af1-e8ff332c8d99",
+                "13e35e9a-30b1-434e-809b-3ac8aa08c0ec",
+                "0f676f01-128f-45dd-a4a6-9a93c8ec50a6",
+                "c57bf7ee-516f-4ace-a7a4-104c6feea647",
+                "d47efd69-02c3-46d0-9d14-d87072772670",
+                "905773dc-fd75-4c00-a9e2-6be6f13b1a11"
             ]
         },
         {
@@ -869,64 +1163,88 @@
             "newvms": [
                 {
                     "account": "1",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "09dee9fe-d2ff-47c2-b86e-4974001dfa02"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "f1b65890-c1f0-4d21-abaf-f55c7972f732"
                 },
                 {
                     "account": "2",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "d24bd0b2-baf7-4576-a35f-10b68cc14949"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "bc3bbdf9-0d65-497e-9a21-a86b91c2e9f7"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "8c03b965-5618-4a5d-8318-6d64cc640744"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "6b527444-f8dd-434a-8802-a9c1131b45da"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "7c7d5211-adc3-46da-9b05-2ea9dd9993b6"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "615fca09-3dbc-4088-a5a8-ded16e1001c1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "313ed89d-fcfe-467c-9446-dac24612e195"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "5780caa2-dd6f-4cb9-a36a-80c2b11b07c4"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "02f0ec43-256e-4189-a334-e4ac3e3457aa"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "d4392b7a-7385-4b2b-ae51-110f7e5848f0"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "beb50bfb-b564-4d2e-acd4-86c8b08e978d"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "f71824c9-4c6e-48bf-861a-b8f72424b303"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "d4bc5d72-4bb1-4d75-a64f-de815c750a80"
                 }
+            ],
+            "removedvms": [
+                "09dee9fe-d2ff-47c2-b86e-4974001dfa02",
+                "348d3a10-0d2f-40de-9e0a-634724a0ad29",
+                "dd3ffee3-4f0f-4cc7-98db-eba60005e0d1",
+                "088cb62d-fa11-4c4a-bf9e-b096e4fb8940",
+                "1b261e9b-057d-4f50-8736-4a8fe19e3405",
+                "92a5f214-4570-4fd4-9b9b-f7c11fc1f4e9",
+                "bcc91121-9d7c-43d9-a61f-d64f7f15a556"
             ]
         },
         {
@@ -934,64 +1252,88 @@
             "newvms": [
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "16ba591a-2734-4793-b96a-829323c81eff"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "d9820252-32e0-49f8-8f2d-640602c6aa85"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "162b9c46-4534-4e1e-9542-de12b2ee0d71"
                 },
                 {
                     "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "c239b745-cb59-47ea-b100-e7f7f3815ccf"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "27df5cfd-e7ad-48e1-91c5-7b8f2368fdf3"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "a66442bf-5cd8-429c-ade9-96d20f56f98d"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "72766f0f-af18-4e6f-9a54-996f0eafabd2"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "537a5d8e-e420-4a3f-b4e0-f6cf6ad3cc1d"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "a871a878-47e3-481f-895e-899a27193072"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "cdba3432-806d-4f17-ac3c-462ea9dae70e"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "b34e985c-6bc8-4e67-ad08-1d99a01814b9"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "b391c750-6e1c-43b0-975f-5bf0983692c9"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "0c7edbae-7317-48c5-9056-dacd91c3d028"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "826e3e4f-8d79-4eb8-a365-734672461f76"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "2"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "640aa47c-31df-4ec3-8f32-4015449e18bf"
                 }
+            ],
+            "removedvms": [
+                "eb2bbebc-b4b6-4420-be53-24453abf65a4",
+                "a66442bf-5cd8-429c-ade9-96d20f56f98d",
+                "8349df31-523e-4a20-8566-f583dc45dcaf",
+                "dce8834e-6705-4edf-9eb0-af9a20b68e37",
+                "9dd59ef0-dac6-4bfe-8c50-fbfbf623f7e1",
+                "ee517e2e-9032-4296-96db-f223d1ae5f70",
+                "a400d52c-e7f6-4c52-8c2f-e9781118bb96"
             ]
         },
         {
@@ -999,133 +1341,183 @@
             "newvms": [
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "2b5f44d5-7b97-44ff-a0f2-c6a3ca74f714"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "7a1533ff-b05b-4527-988f-add879206ef5"
                 },
                 {
                     "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "4de6e2b2-11d1-4dbe-8310-f7ae72592e83"
                 },
                 {
                     "account": "2",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "cf97bec4-96e9-4581-a32d-f1e11873f444"
                 },
                 {
                     "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "a8863622-c3fa-4788-a2b7-6f300313c35c"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "7ecf852f-0794-49bf-98e7-77b70d580ec3"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "0ad9afd5-be18-41e2-a4b5-019c7f9b70e7"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "36215e3c-82c1-40dc-8d60-3d891b2461ab"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "7bc4db74-6ead-46f5-a045-9e878d55716d"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "0b2c29b2-bc9c-47b8-8eb4-3a908dd710e7"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "223af0e9-bc99-431d-bb6b-4b7273c7e13f"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "e87fb36e-3cd6-4743-9f91-080f6ba24009"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "844dcbdf-a9ea-4e53-9575-4da922c569c3"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "259e82f2-e2da-427b-a3ce-e6f40b840bd3"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "c8ac981c-5277-45ae-b766-5be3545ffe47"
                 }
+            ],
+            "removedvms": [
+                "9ac87678-b08b-405f-ae79-14fa7bf35a76",
+                "826e3e4f-8d79-4eb8-a365-734672461f76",
+                "43e7592a-fbcd-485b-ade2-e1974d04367f",
+                "5c092243-dfbd-40e4-a80e-57c3bbf4c434",
+                "259e82f2-e2da-427b-a3ce-e6f40b840bd3",
+                "7b2e06f8-a877-4b61-94d4-55435eb2388d",
+                "6b527444-f8dd-434a-8802-a9c1131b45da"
             ]
         },
         {
             "day": 19,
             "newvms": [
                 {
-                    "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "77a6b744-a7c0-4b4e-83aa-aa6df2252396"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "7b40ec92-b1c5-4e6e-b5fd-9440d9ec1b12"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "8a30f94d-5f45-4893-9632-a787de4c434a"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "a9138505-e500-4643-810f-a7d4ecb5ca81"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "724f1684-a127-4b99-8ea9-f7499372c970"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "2204caca-d21b-4d3d-aced-3e2250839868"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "6db525b2-42c4-4a6e-b80e-d010691f5424"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "ce130f9d-6a8c-49d4-9366-f0130e50de25"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "e9240dba-bb03-4ec9-b47d-28c89b9f8133"
                 },
                 {
                     "account": "2",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "0925a32a-a53f-4404-87d3-841d5cc0739e"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "0c37513c-1b36-4843-b4d0-beaac133e81a"
                 },
                 {
                     "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "fbd605e3-35f8-46ef-82d8-31fc5adef59e"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "e7e28d21-e90f-4d7f-af1a-92427453cdb6"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "a202d451-14bc-43fa-9975-db49aa24a5bf"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "c9c4ac69-0356-43a6-8352-811b325eb88a"
                 },
                 {
-                    "account": "1",
-                    "service_offering": "1"
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "129d5f77-0cfc-46ae-bfcf-e7c815707d74"
                 }
+            ],
+            "removedvms": [
+                "162b9c46-4534-4e1e-9542-de12b2ee0d71",
+                "8f976c4d-59ce-44e6-aa1b-3f1022c47c09",
+                "ddf8329c-19f3-4034-a634-fbed8f9959e2",
+                "d240fc69-b004-4bb5-8873-bed78f0e8c3f",
+                "1b98fb43-74e2-471a-b6b3-239eefd4314c",
+                "bbf92f84-1898-4143-a812-fb3024a90292",
+                "7cb83b83-d213-49f3-a5d7-6aa404b9b14c",
+                "c60f91b6-977d-479a-9bbf-6a787e7e2a6b"
             ]
         },
         {
@@ -1133,68 +1525,94 @@
             "newvms": [
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "468aaacf-782b-4765-84a7-a06bccddde66"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "399d0e93-7b04-4292-91ca-ab9f6a2a9652"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "a8d5d7c1-5180-4f16-9686-ccf28046e892"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "e115b975-be1e-43b8-a304-1e09f043dd86"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "b4211c41-4704-4df1-9b7c-5b00e523d445"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "61e7d29e-f591-4c41-b16e-2d3b41c7c459"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "75a4b33f-869a-4f5b-96f9-2ff70704c41f"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "11042486-1f5f-46fb-8c8d-4b5d7e926db2"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "5a003f18-e46d-433b-8f8a-3438390da854"
                 },
                 {
                     "account": "1",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "9c5b1bcd-2ac2-4074-a34c-8d057ff2e800"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "f35a9296-e5b7-4786-a5f1-d6a314a1bf94"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "c7d1ec05-fdbf-419e-8b20-f10d3a9d9b03"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "f8439972-f88e-4a18-875c-0e6aec5cff20"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "a03dedc8-abd0-4a1b-8a9c-241f24da7930"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "fccf5393-c1ff-4dd9-822d-11996d19a686"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "5065afac-f46d-453f-a349-afbce874030a"
                 }
+            ],
+            "removedvms": [
+                "4b43c933-ac2a-4888-8d9c-c07893b76525",
+                "d3aea7ef-b3d6-407e-962e-75427b32f0fd",
+                "bc3bbdf9-0d65-497e-9a21-a86b91c2e9f7",
+                "1bae4352-60fd-4875-804b-04e2324da7c0",
+                "b34e985c-6bc8-4e67-ad08-1d99a01814b9",
+                "0c37513c-1b36-4843-b4d0-beaac133e81a",
+                "72766f0f-af18-4e6f-9a54-996f0eafabd2",
+                "129d5f77-0cfc-46ae-bfcf-e7c815707d74"
             ]
         },
         {
@@ -1202,137 +1620,189 @@
             "newvms": [
                 {
                     "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "07b9a0cf-8aa3-4860-90b1-21c4dbb2166d"
                 },
                 {
                     "account": "2",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "8ffc8eee-68f0-4884-acad-a9ac432fc0e6"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "c9753c4a-d513-4476-9dc5-2be56ad9602b"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "9fee3a18-39d2-4e35-b44e-8dc79cccfa0c"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "55121894-5d24-4390-a9f8-00806a6c6f5d"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "0f321496-518c-4968-bc1f-c0277df2ad7d"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "6f2c8f89-4839-441f-be30-5e9e6b83f152"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "c85e2fc3-0f47-421b-8e94-3316abb9bfcc"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "3399e928-50f8-44d8-85e2-b9968a376450"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "b03ba0e5-76b4-4c38-8330-44e63f44bbfe"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "438d7655-7316-470c-baa5-3f18bd0a2bcc"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "d103e91a-12cb-4882-8fd3-a25ad01e2a89"
                 },
                 {
                     "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "61ed3766-fbb6-4172-abfa-bd391f804285"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "d6705e2e-c395-4275-aed5-3fd95c34d5ff"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "7218eeec-b7da-46b7-8f48-acfda7a3fefc"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "b112f5af-e4d1-4ad6-a7d6-3ed3de5c06a4"
                 }
+            ],
+            "removedvms": [
+                "56b99b00-5241-41f9-8fd5-ebe6b2055e7b",
+                "3bfaeb28-121a-4ce4-8919-e22a02b52bdb",
+                "23559e2e-3ab6-48f8-9691-c12f261e2772",
+                "c7d1ec05-fdbf-419e-8b20-f10d3a9d9b03",
+                "3e33049f-4e9f-4e7e-8331-0ace6e6680e9",
+                "75515453-fc45-45ef-996c-5ab7558b56f7",
+                "7c7d5211-adc3-46da-9b05-2ea9dd9993b6",
+                "19cfbccb-cb36-4768-98f9-55d9207e5af5"
             ]
         },
         {
             "day": 22,
             "newvms": [
                 {
-                    "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "e65270e7-2170-4676-830c-b6184a4df642"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "8fa54aaa-bc9d-45c5-8c37-b6af6eb4c3c5"
                 },
                 {
                     "account": "2",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "85a9ab7e-4771-4c51-a3aa-baac8fb14ba0"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "ece35d23-1a9a-4da9-bbfe-c2dc2ad2b59c"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "5924ab36-904c-4115-97c5-8703d4c0dd11"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "d0ff186e-78e6-4d4e-8bfe-802559734939"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "bee70deb-6b54-4066-95f7-fc0619af2617"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "de43ad94-4eba-448c-a127-0a302652f502"
                 },
                 {
                     "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "7fdfde58-46b5-43a5-a7f8-33ca5167b2d3"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "01215208-5d7c-4cb9-9c3a-97c132974de5"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "6aedfef2-8c64-483c-8a5b-a148911d63a6"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "610b33bb-4e22-440a-91fc-ea83a9fe0613"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "5422780b-830f-4e52-95bb-27bd9d6cdb49"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "43e0b924-41c7-4a00-9a21-92a0c565dce7"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "15e453e3-0fbb-4136-8b7d-b373af95c830"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "31b36c8e-b6d4-4031-af28-708091041d8b"
                 }
+            ],
+            "removedvms": [
+                "b112f5af-e4d1-4ad6-a7d6-3ed3de5c06a4",
+                "a871a878-47e3-481f-895e-899a27193072",
+                "db3e9745-f686-4967-9f50-e22206641c60",
+                "d0ff186e-78e6-4d4e-8bfe-802559734939",
+                "9334f646-9146-4c72-8cb8-5957e24edfcb",
+                "e7427ff1-4f36-40c6-8b7b-d84905a0d8f2",
+                "41b8cce2-f721-4d6e-8b00-6567ba2760dc",
+                "468aaacf-782b-4765-84a7-a06bccddde66"
             ]
         },
         {
@@ -1340,72 +1810,100 @@
             "newvms": [
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "22972ac3-e24f-48b8-af67-c497a2f37690"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "671fd5a7-ebba-4476-b58a-3c1e0cf88272"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "2e9b491f-608f-41b8-842d-90c017ba65c9"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "560f83c0-452c-48e9-a10a-ffe7bd9ccae4"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "9d7910a8-a38b-41bd-b0ea-6fb09fd12ef0"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "93be1d92-9822-4eee-9eac-b4f219a3a38c"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "c50125a2-2e87-4723-977f-544bdecac670"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "b9c3d9e6-ac6a-4fcc-8568-6aa41234050a"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "2be69305-4124-421e-b881-ec69c739090a"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "e18610e5-0fe4-4316-b933-aa38d11b9ee1"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "be3f76e7-02ee-419b-8b90-38993f53e19c"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "0f747f9a-0590-492b-bd52-2181fbd6db47"
                 },
                 {
                     "account": "2",
-                    "service_offering": "2"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "da800996-b520-4878-9b5e-ce69272c7431"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "564848ba-be80-4cea-bf3b-195db201fd71"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "0498ea75-e1a3-4c82-a1d4-404d7cbbea09"
                 },
                 {
                     "account": "2",
-                    "service_offering": "2"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "9dd52f0a-619b-4f6e-a17b-82a15286c1c3"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "2b8f4d44-e59a-4a23-b83c-2970a6f6f674"
                 }
+            ],
+            "removedvms": [
+                "69f0a902-42e6-4735-862e-51410e454733",
+                "9dd52f0a-619b-4f6e-a17b-82a15286c1c3",
+                "7218eeec-b7da-46b7-8f48-acfda7a3fefc",
+                "5780caa2-dd6f-4cb9-a36a-80c2b11b07c4",
+                "a202d451-14bc-43fa-9975-db49aa24a5bf",
+                "e9240dba-bb03-4ec9-b47d-28c89b9f8133",
+                "5ec592ec-7da0-4de3-a5ee-4177fc629d89",
+                "b9c3d9e6-ac6a-4fcc-8568-6aa41234050a",
+                "ce1cb542-de86-4146-9e0d-3381596788a2"
             ]
         },
         {
@@ -1413,145 +1911,201 @@
             "newvms": [
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "03ba605f-0c5f-41e7-8dc0-ba92451196d6"
                 },
                 {
                     "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "0edf3bdd-5967-455e-9a87-c9810fbf2c21"
                 },
                 {
                     "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "c8621cee-3d1f-43f8-83a4-12422fbdccbc"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "724c40e4-2683-405f-b965-5a897c348513"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "fd7c0013-274f-41b9-82a1-8471aff035d1"
                 },
                 {
                     "account": "2",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "4250ec94-0648-4da2-8ab1-794878fbd1a8"
                 },
                 {
                     "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "1526ceac-a756-44e8-9bd1-a7ab9ca64af1"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "9ac2bab4-f202-4bc1-a481-ed13ec889c98"
                 },
                 {
                     "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "6584ae4b-89f4-4bce-b7ac-6afc258285fb"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "73fbd093-cdc0-477c-a714-6b5c415d1638"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "24a2d820-7b0e-485a-a3f2-d33fd730878e"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "c6a19272-77e5-48d4-ab45-a358809f4259"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "ad2e6567-47ed-498d-8c5c-a55b320a8d7d"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "f12512db-cb1e-42be-a1d8-4e023df16825"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "cf576918-6294-4c81-9065-7ab2c69a48aa"
                 },
                 {
-                    "account": "2",
-                    "service_offering": "1"
+                    "account": "1",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "5afab18e-822c-44ac-bdda-c4081a16b5dd"
                 },
                 {
-                    "account": "2",
-                    "service_offering": "1"
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "3d16d4e8-b75b-4315-807c-42f85d5a1a6f"
                 }
+            ],
+            "removedvms": [
+                "2d4820a0-e164-4252-8322-0c4bd3f439d9",
+                "e18610e5-0fe4-4316-b933-aa38d11b9ee1",
+                "8e906554-3a4d-4234-8225-8294f4c4e982",
+                "560f83c0-452c-48e9-a10a-ffe7bd9ccae4",
+                "f35a9296-e5b7-4786-a5f1-d6a314a1bf94",
+                "c8621cee-3d1f-43f8-83a4-12422fbdccbc",
+                "8c03b965-5618-4a5d-8318-6d64cc640744",
+                "ad2e6567-47ed-498d-8c5c-a55b320a8d7d",
+                "3d16d4e8-b75b-4315-807c-42f85d5a1a6f"
             ]
         },
         {
             "day": 25,
             "newvms": [
                 {
-                    "account": "1",
-                    "service_offering": "2"
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "ccf8c0bf-08e3-4d59-8b98-684e97e5e5d3"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "9b475d0e-6939-4d67-ad07-8ad1e14a82b3"
                 },
                 {
                     "account": "2",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "e07878fc-5bd8-49d9-8cce-d64c1c88b71b"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "02079879-13b3-4bf0-bff0-265a7d6ef24d"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "c971549b-8f1e-42de-8538-94674de6f304"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "c917a834-a770-4f31-8a97-bb460fd35d78"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "eaeb34d3-7bb0-4f13-8af8-ee14c70759ef"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "9eb19f70-c0eb-46b9-a74c-a0cba96304d0"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "e880f283-cdb5-472c-89ac-b2efb68163e1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "bd027c98-4d70-40fd-b68a-01d2b8b53bfb"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "1e3d76ab-f805-40f5-83fa-27d142e7bc7b"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "79270732-9ed5-4100-b0f5-b944bfca6c5a"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "b43221ac-e980-48a4-9a4b-b5a9c06cff0d"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "2a382479-af32-4d6f-b1ad-4529eb94c902"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "439e0bc0-bde2-4d4b-9ab9-e42eb7fdbe02"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "26d195a8-b00a-454e-91b8-7531a16675f0"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "35e7c358-8a2e-431d-a87d-5a1b09085d90"
                 }
+            ],
+            "removedvms": [
+                "de43ad94-4eba-448c-a127-0a302652f502",
+                "c85e2fc3-0f47-421b-8e94-3316abb9bfcc",
+                "2b8f4d44-e59a-4a23-b83c-2970a6f6f674",
+                "a9138505-e500-4643-810f-a7d4ecb5ca81",
+                "7fdfde58-46b5-43a5-a7f8-33ca5167b2d3",
+                "8efae0ef-b6d1-45e1-9ed9-8c525a5fb911",
+                "43e0b924-41c7-4a00-9a21-92a0c565dce7",
+                "e115b975-be1e-43b8-a304-1e09f043dd86",
+                "640aa47c-31df-4ec3-8f32-4015449e18bf"
             ]
         },
         {
@@ -1559,72 +2113,100 @@
             "newvms": [
                 {
                     "account": "1",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "6d9981b4-c0f9-4738-9e7c-d1b40dddcd84"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "f41a4057-679b-4ee8-9901-46aaa4078b17"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "2ebc9999-22b4-49a5-9a59-e042ded63e29"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "282cfbc5-9bbb-45a7-b1b9-76fc2f2abe25"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "30cb5c9d-968b-4052-886c-a69f58b71c0f"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "b5e36847-68ad-47de-84c3-b41946ad9f54"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "776da060-c763-4cbd-b125-11d72dc923a4"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "3b6a1033-e919-45f7-9dbc-f74d5883d0ea"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "0fb01a64-ff3b-4950-8898-effc13360028"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "44a3be40-d30b-4bfa-9b85-f97f2069e942"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "7c03c7f6-47d9-410b-ba2a-6346a6616eae"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "f3016409-966e-491f-a543-5ef43d918f6e"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "679b7856-885e-4bd0-8663-b6a4f5054c6a"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "fc7be5fb-951d-4fa2-8111-35e809523b8c"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "b95a5da9-7488-45c4-b2fd-5bf361d6daa6"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "dfcf7cc9-1878-40a7-8a50-24cded6e71e8"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "1fa39ec8-09bf-4dd2-8da8-c573ebf76b47"
                 }
+            ],
+            "removedvms": [
+                "9ac2bab4-f202-4bc1-a481-ed13ec889c98",
+                "44a3be40-d30b-4bfa-9b85-f97f2069e942",
+                "01215208-5d7c-4cb9-9c3a-97c132974de5",
+                "6584ae4b-89f4-4bce-b7ac-6afc258285fb",
+                "7ee8ea04-15cd-405e-840e-907fbe13f193",
+                "be127215-677d-43d5-8d74-0fd2afd1aa99",
+                "7ecf852f-0794-49bf-98e7-77b70d580ec3",
+                "223af0e9-bc99-431d-bb6b-4b7273c7e13f",
+                "be3f76e7-02ee-419b-8b90-38993f53e19c"
             ]
         },
         {
@@ -1632,76 +2214,106 @@
             "newvms": [
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "7e7f4ecc-863e-4bdd-b5af-3d573b94e651"
                 },
                 {
                     "account": "2",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "59b58ffa-4e48-41c3-ba2d-41d7b0bc6699"
                 },
                 {
                     "account": "2",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "c08a113c-5783-412f-9c4f-cfb073a9fa82"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "647c933d-968e-4555-8a9a-997c6963e9d5"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "8bcaafc2-bc3e-485f-a72f-ba72ec67b2b6"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "710d2c5b-4247-4ff4-a2e4-aa2c7836ad3b"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "886010b2-1a53-43ee-9184-577f6a11ef8a"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "c27e310c-e844-477a-9af8-8c6dcf6a1ba2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "fcdadfc9-87f9-4f4c-a80e-8e5c3f652149"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "32116c98-ed84-4ea9-8ebe-3c6d9a7b67b7"
                 },
                 {
                     "account": "2",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "d0f9c89f-9568-4e45-88e6-d4a2c10e1c34"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "36a32787-fb8f-4911-9dc3-4ef0cc56b725"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "ad22ea67-0e5d-4517-83da-6a85a67ac821"
                 },
                 {
                     "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "34722830-5199-4425-8277-eabacb2868df"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "71ce2770-70e7-40af-86e4-b33c7c446382"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "33241670-3cf0-46e6-a0db-00f85f30a80f"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "34478f0e-4877-4b9a-ac98-47bd1a4c8295"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "79d516ef-73ec-430d-83e6-9ae0d75c015c"
                 }
+            ],
+            "removedvms": [
+                "4c4e1c24-acb4-451e-ac27-2e264ef3602b",
+                "0c7edbae-7317-48c5-9056-dacd91c3d028",
+                "abf3eede-df11-42ec-a982-82ca9df5323a",
+                "8fa54aaa-bc9d-45c5-8c37-b6af6eb4c3c5",
+                "79d516ef-73ec-430d-83e6-9ae0d75c015c",
+                "c50125a2-2e87-4723-977f-544bdecac670",
+                "36215e3c-82c1-40dc-8d60-3d891b2461ab",
+                "2be69305-4124-421e-b881-ec69c739090a",
+                "b9db8d4b-76e4-428b-b82f-6fb8fdaa16ca",
+                "537a5d8e-e420-4a3f-b4e0-f6cf6ad3cc1d"
             ]
         },
         {
@@ -1709,230 +2321,320 @@
             "newvms": [
                 {
                     "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "78137e5c-6748-4004-a2e7-20a706e578d3"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "450f216d-24f9-45cd-ac01-9fb04c36ad09"
                 },
                 {
                     "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "20f9c12c-0c2d-4c4e-8858-9d6823bfc54c"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "d0df1e40-5cb6-486e-bd17-a6febaaef034"
                 },
                 {
                     "account": "1",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "c0c516ea-261d-4b81-8021-8a575f45de22"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "41aa4596-8234-448b-a496-d0615aad4d08"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "593c7c07-dc28-4e8c-a561-20eed5b41e76"
                 },
                 {
                     "account": "2",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "54684636-e0a3-443a-9a19-24d493ee2dd7"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "2afa1b72-3d65-4f8f-beba-7ea4a5259c0d"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "c6f5dad0-eb54-4f8b-a8bd-09d204a6259b"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "203889d9-34ee-41ca-9703-74ffa426219d"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "4798369f-9b92-483f-97e3-91f5e19004c5"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "ada5d25b-32db-4d37-9d4d-87311e43f61c"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "fc0b5ea7-82d1-4502-951d-6746d3321aa3"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "6a525151-687f-44f7-b7e4-5486de61c613"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "4e24c40a-10f5-4caf-885c-36106cb7fb5b"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "6866c66d-1716-4414-80b5-8052a56eebdd"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "4808af6c-3422-4c02-9beb-7a40b0cb078f"
                 }
+            ],
+            "removedvms": [
+                "888d0b47-dfcd-46eb-a77f-eb8795f60c0d",
+                "61ed3766-fbb6-4172-abfa-bd391f804285",
+                "361dbc66-61f8-4ae9-a715-72826a62c2a5",
+                "6db525b2-42c4-4a6e-b80e-d010691f5424",
+                "3cdf2d0e-ea3a-492c-8fb0-115292486320",
+                "724f1684-a127-4b99-8ea9-f7499372c970",
+                "35e7c358-8a2e-431d-a87d-5a1b09085d90",
+                "c971549b-8f1e-42de-8538-94674de6f304",
+                "77a6b744-a7c0-4b4e-83aa-aa6df2252396",
+                "2ebc9999-22b4-49a5-9a59-e042ded63e29"
             ]
         },
         {
             "day": 29,
             "newvms": [
                 {
-                    "account": "1",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
+                    "account": "2",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "5d927877-ca95-4443-8b7a-f5e2df86dc4f"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "2f7a4240-6df7-453a-8eed-bb02f221c569"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "b85dd51b-4637-4625-b2d0-e11c9751eed5"
                 },
                 {
                     "account": "2",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "ef579874-9d12-4095-a4bb-94ef6a0b9483"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "e91aac54-278b-4a87-93c0-ad08f84054c4"
                 },
                 {
                     "account": "1",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "04667798-008b-469a-9e09-92eda7cff451"
                 },
                 {
                     "account": "2",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "8f4eb8ec-3ba3-411d-aaee-ed9416c697ba"
                 },
                 {
                     "account": "2",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "15f233ed-3bbf-4993-83d2-46e7d384ced3"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "cc4501a3-153b-4b17-9148-89187d34100a"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "0d3a77b4-2117-43b6-b981-68f7973094e8"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "c15e0cc3-d2f1-4d34-a4f3-23d4819433c3"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "14707251-511f-4165-9fba-9aafa271a9a8"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "cd60b1a0-592c-4aba-8fa6-65268f755996"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "75a2e1e5-2a43-4717-aa4b-7549dfe0eb13"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "e90c7d0c-5342-4bb2-a500-74ddbf1165b1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "2debd0c6-2a45-4675-b1a5-f6eae8222741"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "93c6cd91-1207-426a-a972-e23ba61b722d"
+                },
+                {
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "4ede43cb-3c29-4112-8d39-8c89158dc3a7"
                 }
+            ],
+            "removedvms": [
+                "71ce2770-70e7-40af-86e4-b33c7c446382",
+                "d4392b7a-7385-4b2b-ae51-110f7e5848f0",
+                "75a2e1e5-2a43-4717-aa4b-7549dfe0eb13",
+                "d103e91a-12cb-4882-8fd3-a25ad01e2a89",
+                "e91aac54-278b-4a87-93c0-ad08f84054c4",
+                "31b36c8e-b6d4-4031-af28-708091041d8b",
+                "2c4cd835-b57d-4a84-9470-a08ec639ae3e",
+                "cf576918-6294-4c81-9065-7ab2c69a48aa",
+                "3399e928-50f8-44d8-85e2-b9968a376450",
+                "ccf8c0bf-08e3-4d59-8b98-684e97e5e5d3"
             ]
         },
         {
             "day": 30,
             "newvms": [
                 {
-                    "account": "1",
-                    "service_offering": "1"
+                    "account": "2",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "ae171a48-e765-4c4d-8e42-dfd0639050ab"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "8d095b16-dbbd-4a1e-b4fd-0c9bcbf555b1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "613a54f6-dcd8-41c4-a413-0ed43b134964"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "66b1100f-b0f7-4cf0-8149-ceb964f93306"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "5aa9268d-03c4-4731-ac21-9c768e75c4ff"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "19f8bde0-4256-4d7f-9819-9710e82eca1d"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "2d5b13f0-0de3-41f7-9e76-3968d3b7afd1"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "fc26d5af-6aca-4aee-baa8-d505f49a9957"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "6afd4b71-fac6-405a-bc8a-0aa9b6a841f2"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "381b51e9-bb5e-4572-b6af-eb0f8d8d7875"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "0fe58b03-8c5a-449e-89d3-5c99be9118a9"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "8d0abc3e-9b91-4aed-96ad-b60d77926c7a"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "c6440db0-f2d6-41d8-9496-be817f941280"
+                },
+                {
+                    "account": "1",
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "f15ca228-fd71-420a-b09a-6cd70601fa95"
                 },
                 {
                     "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "63434003-9a94-457c-a9c0-61c685f7ef90"
                 },
                 {
                     "account": "2",
-                    "service_offering": "2"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "85716553-cf39-4aa6-b984-a0f095d31a8d"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "2",
+                    "vm_scenario_uuid": "7a2ede8f-52f8-4dd3-a971-7bd2bd67e7ce"
                 },
                 {
                     "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "2"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "1",
-                    "service_offering": "1"
-                },
-                {
-                    "account": "2",
-                    "service_offering": "1"
+                    "service_offering": "1",
+                    "vm_scenario_uuid": "2ffda3c0-21b9-48d5-8d0d-52144126ef16"
                 }
+            ],
+            "removedvms": [
+                "ecc02aee-a9ba-4067-9a12-45639f4c21d8",
+                "fccf5393-c1ff-4dd9-822d-11996d19a686",
+                "84e9b4a6-6dfa-447f-a3fe-5393822d6bc3",
+                "d0df1e40-5cb6-486e-bd17-a6febaaef034",
+                "1101e152-b3a6-4bf8-8fa1-5aa62af6a076",
+                "1d41cff3-0e72-4b0d-bd06-69c446984117",
+                "34722830-5199-4425-8277-eabacb2868df",
+                "73fbd093-cdc0-477c-a714-6b5c415d1638",
+                "a8d5d7c1-5180-4f16-9686-ccf28046e892",
+                "c27e310c-e844-477a-9af8-8c6dcf6a1ba2"
             ]
         }
     ],

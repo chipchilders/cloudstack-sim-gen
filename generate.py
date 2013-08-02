@@ -6,6 +6,7 @@ from optparse import OptionParser
 import random
 import json
 import inspect
+import uuid
 
 def main():
     usage = "usage: %prog [options] INPUTFILE"
@@ -42,6 +43,8 @@ def create_scenario(inputfilename, outputfilename):
 
     output = {}
 
+    scenario_vms = []
+
     try:
         check_required_data(input_json)
     except Exception as inex:
@@ -63,7 +66,8 @@ def create_scenario(inputfilename, outputfilename):
     output["days"] = []
 
     while day < input_json["number_of_days"]+1:
-        output["days"].append(plan_day(day, input_json))
+        planned_day, scenario_vms = plan_day(day, input_json, scenario_vms)
+        output["days"].append(planned_day)
         day+=1
 
     if outputfilename == "stdout":
@@ -76,21 +80,37 @@ def create_scenario(inputfilename, outputfilename):
 
     return 0
 
-def plan_day(day, input_json):
+def plan_day(day, input_json, scenario_vms):
     day_definition = { "day": day }
     day_definition["newvms"] = []
+    day_definition["removedvms"] = []
 
     x = day
-    num_vms_for_day = int(round(eval(input_json["vm_growth"]), 0))
+    num_vms_to_add_for_day = int(round(eval(input_json["vm_growth"]), 0))
+    num_vms_to_remove_for_day = int(round(eval(input_json["vm_decline"]), 0))
 
     i = 1
-    while i <= num_vms_for_day:
+    while i <= num_vms_to_add_for_day:
         account_for_vm = weighted_choice(input_json["account_dispersion"])
         service_offering_for_vm = weighted_choice(input_json["offering_dispersion"])
-        day_definition["newvms"].append({ "account": input_json["accounts"][account_for_vm]["username"], "service_offering": input_json["service_offerings"][service_offering_for_vm]["name"] })
+        newvm = { 
+            "account": input_json["accounts"][account_for_vm]["username"], 
+            "service_offering": input_json["service_offerings"][service_offering_for_vm]["name"], 
+            "vm_scenario_uuid": str(uuid.uuid4())
+            }
+        day_definition["newvms"].append(newvm)
+        scenario_vms.append(newvm["vm_scenario_uuid"])
         i+=1
 
-    return day_definition
+    i = 1
+    while i <= num_vms_to_remove_for_day:
+        if len(scenario_vms) > 0:
+            vm_to_remove = random.sample(scenario_vms, 1)
+            scenario_vms = list(set(scenario_vms).difference(set(vm_to_remove)))
+            day_definition["removedvms"].append(vm_to_remove[0])
+        i+=1
+
+    return day_definition, scenario_vms
 
 # Cargo Cult fun with the function below (from http://eli.thegreenplace.net/2010/01/22/weighted-random-generation-in-python/)
 def weighted_choice(weights):
