@@ -174,16 +174,24 @@ class TestScenario(cloudstackTestCase):
         """Test to deploy vms using the defined scenario
         """
 
+        active_vms = {}
+
         vm = 0
         day = 0
         for daydef in self.services["scenario"]["days"]:
             day+=1
+            vmlocation = 0
             for newvm in daydef["newvms"]:
                 vm+=1
-                self.CreateVM(newvm)
+                active_vms[newvm["vm_scenario_uuid"]] = self.CreateVM(newvm).id
+                vmlocation += 1
                 current_zone_mem = self.GetStats(day, vm)
                 if float(current_zone_mem) >= float(self.services["scenario"]["capacity_increase_rules"]["threashold"]):
                     self.AddCluster(int(self.services["scenario"]["capacity_increase_rules"]["cluster_size"]))
+
+            for removevm in daydef["removedvms"]:
+                self.DestroyVM(active_vms[removevm])
+
 
     def AddCluster(self, cluster_size):
         #Create clusters with Hypervisor type XEN/KVM/VWare
@@ -273,6 +281,35 @@ class TestScenario(cloudstackTestCase):
             "Running",
             msg="VM is not in Running state"
         )
+
+        return virtual_machine.id
+
+    def DestroyVM(self, id):
+        VirtualMachine.delete(self.apiclient, id)
+
+        list_vm_response = VirtualMachine.list(
+                                            self.apiclient,
+                                            id=id
+                                            )
+        self.assertEqual(
+                            isinstance(list_vm_response, list),
+                            True,
+                            "Check list response returns a valid list"
+                        )
+
+        self.assertNotEqual(
+                            len(list_vm_response),
+                            0,
+                            "Check VM avaliable in List Virtual Machines"
+                        )
+
+        self.assertEqual(
+                            list_vm_response[0].state,
+                            "Destroyed",
+                            "Check virtual machine is in destroyed state"
+                        )
+        return
+
 
     def tearDown(self):
         stats = { "datapoints": self.datapoints }
