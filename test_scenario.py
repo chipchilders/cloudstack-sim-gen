@@ -26,6 +26,10 @@ import uuid
 
 from nose.plugins.attrib import attr
 
+class mocnic:
+    def __init__(self, ip_address):
+        self.ipaddress = ip_address
+
 class Services:
 
     def __init__(self):
@@ -183,7 +187,8 @@ class TestScenario(cloudstackTestCase):
             vmlocation = 0
             for newvm in daydef["newvms"]:
                 vm+=1
-                active_vms[newvm["vm_scenario_uuid"]] = self.CreateVM(newvm).id
+                created_vm = self.CreateVM(newvm)
+                active_vms[newvm["vm_scenario_uuid"]] = created_vm
                 vmlocation += 1
                 current_zone_mem = self.GetStats(day, vm)
                 if float(current_zone_mem) >= float(self.services["scenario"]["capacity_increase_rules"]["threashold"]):
@@ -285,7 +290,9 @@ class TestScenario(cloudstackTestCase):
         return virtual_machine.id
 
     def DestroyVM(self, id):
-        VirtualMachine.delete(self.apiclient, id)
+        mocnictouse = mocnic("127.0.0.1")
+        vm = VirtualMachine({"id": id, "nic": [mocnictouse]}, self.services)
+        vm.delete(self.apiclient)
 
         list_vm_response = VirtualMachine.list(
                                             self.apiclient,
